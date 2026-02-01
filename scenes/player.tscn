@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://fqnpaxidr784"]
+
+[ext_resource type="Script" uid="uid://0o105le8esnq" path="res://scripts/player.gd" id="1_3vyb7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
+radius = 103.0
+height = 234.0
+
+[node name="player" type="CharacterBody2D" unique_id=575009404]
+script = ExtResource("1_3vyb7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2036827427]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=834930231]
+offset_left = -117.0
+offset_top = -96.0
+offset_right = 130.0
+offset_bottom = 122.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1609318011]
+position = Vector2(0, 9)
+shape = SubResource("CapsuleShape2D_u8vuu")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1234617087]
