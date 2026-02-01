@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ciuakvp37r8bx"]
+
+[ext_resource type="Script" uid="uid://bdj0i58yreqs3" path="res://enemy.gd" id="1_7p1mj"]
+
+[node name="enemy" type="CharacterBody2D" unique_id=1635071808]
+script = ExtResource("1_7p1mj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1768919789]
+offset_left = -63.0
+offset_top = -54.0
+offset_right = 64.0
+offset_bottom = 66.0
+color = Color(0.782125, 0, 0.09272816, 1)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=506269665]
+debug_enabled = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1739188031]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
