@@ -22,3 +22,6 @@ position = Vector2(0, 9)
 shape = SubResource("CapsuleShape2D_u8vuu")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1234617087]
+offset = Vector2(0, 40)
+zoom = Vector2(0.51, 0.51)
+position_smoothing_enabled = true

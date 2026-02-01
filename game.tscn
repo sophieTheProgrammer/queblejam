@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://ygmskydwuf8"]
 
 [ext_resource type="PackedScene" uid="uid://fqnpaxidr784" path="res://scenes/player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="1_e2o6t"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_80nbo"]
 
 [node name="game" type="Node2D" unique_id=200994837]
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("1_80nbo")]
+
+[node name="tree" parent="." unique_id=1293499122 instance=ExtResource("1_e2o6t")]
+position = Vector2(-590, -214)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=743750651]
 
