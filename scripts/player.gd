@@ -3,7 +3,7 @@ extends CharacterBody2D
 const SPEED = 1200.0
 const JUMP_VELOCITY = -1600.0
 const GRAVITY = 4000
-const coyote_frames = 6  # How many in-air frames to allow jumping
+const coyote_frames = 3  # How many in-air frames to allow jumping
 var coyote = false  # Track whether we're in coyote time or not
 var last_floor = false  # Last frame's on-floor state
 var jumping = false
@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		jumping = true
 		coyote = false
 	if not Input.is_action_pressed("Jump") and not is_on_floor():
-		velocity.y -= JUMP_VELOCITY/45
+		velocity.y -= JUMP_VELOCITY/25
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("Left", "Right")
