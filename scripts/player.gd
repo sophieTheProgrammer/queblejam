@@ -1,14 +1,14 @@
 extends CharacterBody2D
 
-const SPEED = 1200.0
-const JUMP_VELOCITY = -1600.0
-const GRAVITY = 4000
+const SPEED = 1350.0
+const JUMP_VELOCITY = -1400.0
+const GRAVITY = 3200
 const coyote_frames = 3  # How many in-air frames to allow jumping
 var coyote = false  # Track whether we're in coyote time or not
 var last_floor = false  # Last frame's on-floor state
 var jumping = false
-const ACCELERATION = 5000
-const DECCELERATION = 2000
+const ACCELERATION = 4000
+const DECCELERATION = 4000
 @onready var sprite = $Sprite2D
 func _ready() -> void:
 	pass
