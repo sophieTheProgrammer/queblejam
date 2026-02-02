@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		$CoyoteTimer.start()
 		print("Starting Coyote Timer")
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and (is_on_floor() or coyote):
+	if Input.is_action_just_pressed("Jump") and (is_on_floor() or coyote):
 			velocity.y = JUMP_VELOCITY
 			jumping = true
 			coyote = false
