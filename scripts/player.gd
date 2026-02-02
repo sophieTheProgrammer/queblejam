@@ -1,13 +1,15 @@
 extends CharacterBody2D
 
 
-const SPEED = 600.0
-const JUMP_VELOCITY = -1000.0
-const GRAVITY = 2200
+const SPEED = 1000.0
+const JUMP_VELOCITY = -1600.0
+const GRAVITY = 2900
 const coyote_frames = 6  # How many in-air frames to allow jumping
 var coyote = false  # Track whether we're in coyote time or not
 var last_floor = false  # Last frame's on-floor state
 var jumping = false
+const ACCELERATION = 4000
+const DECCELERATION = 2500
 func _ready() -> void:
 	pass
 func _physics_process(delta: float) -> void:
@@ -30,11 +32,12 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("Left", "Right")
-	if direction:
-		velocity.x = direction * SPEED
+	print(direction)
+	if direction != 0:
+		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION * delta)
+		#velocity = velocity.move_toward(SPEED, ACCELERATION * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
+	velocity.x = move_toward(velocity.x, 0, ACCELERATION * delta)
 	last_floor = is_on_floor()
 	move_and_slide()
 
