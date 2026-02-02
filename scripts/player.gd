@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY = -1900.0
 @export var GRAVITY = 4000
 @export var coyote_frames = 3  # How many in-air frames to allow jumping
-@export var fast_fall = 120
+@export var fast_fall = 80
  
 var coyote = false  # Track whether we're in coyote time or not
 var last_floor = false  # Last frame's on-floor state
@@ -53,9 +53,10 @@ func handle_jump(delta):
 		coyote = false
 	
 	# # adding fast fall on the way down
-	if not is_on_floor() and jumping: 
+	if not is_on_floor() and jumping:
+		if not Input.is_action_pressed("Jump"):
+			velocity.y += fast_fall
 		if velocity.y > 0:
-			print("fast falling")
 			velocity.y += fast_fall
 		
 	last_floor = is_on_floor()
