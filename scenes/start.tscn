@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bkirjgqmvctn4"]
+
+[node name="Start" type="Node2D" unique_id=1876381271]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1480343519]
+offset_left = -133.0
+offset_top = -80.0
+offset_right = 1312.0
+offset_bottom = 749.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1158674287]
+offset_right = 1211.0
+offset_bottom = 189.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "The game can be start"
