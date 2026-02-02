@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://bey60bmk2kegn"]
 
-[ext_resource type="Texture2D" uid="uid://dhsm71lovllm1" path="res://stock/twee.png" id="1_d7po0"]
+[ext_resource type="Texture2D" uid="uid://g7huycvsknj0" path="res://art/tree.png" id="1_avsvi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avsvi"]
-size = Vector2(176, 148)
+size = Vector2(220, 148)
 
 [node name="tree" type="AnimatableBody2D" unique_id=1956730079]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1303620596]
 position = Vector2(-3.8146973e-06, 7.6293945e-06)
-scale = Vector2(0.78571427, 0.66888887)
-texture = ExtResource("1_d7po0")
+scale = Vector2(0.17577592, 0.1496403)
+texture = ExtResource("1_avsvi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1530915941]
-position = Vector2(0, -3)
+position = Vector2(7, -9)
 shape = SubResource("RectangleShape2D_avsvi")
