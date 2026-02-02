@@ -9,6 +9,7 @@ var last_floor = false  # Last frame's on-floor state
 var jumping = false
 const ACCELERATION = 5000
 const DECCELERATION = 2000
+@onready var sprite = $Sprite2D
 func _ready() -> void:
 	pass
 func _physics_process(delta: float) -> void:
@@ -33,7 +34,12 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("Left", "Right")
+	
 	if direction != 0:
+		if direction == 1:
+			sprite.flip_h = false
+		else:
+			sprite.flip_h = true
 		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION * delta)
 		#velocity = velocity.move_toward(SPEED, ACCELERATION * delta)
 	else:
