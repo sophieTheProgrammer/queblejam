@@ -28,9 +28,6 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		jumping = true
 		coyote = false
-	#if Input.is_action_just_pressed("Jump") and (is_on_floor() or coyote):
-		#jumping = true
-		#coyote = false
 	if not Input.is_action_pressed("Jump") and not is_on_floor():
 		velocity.y -= JUMP_VELOCITY/45
 	# Get the input direction and handle the movement/deceleration.
