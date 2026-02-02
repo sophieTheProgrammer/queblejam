@@ -1,16 +1,49 @@
 [gd_scene format=3 uid="uid://bkirjgqmvctn4"]
 
+[ext_resource type="Script" uid="uid://bqwbyydrljorq" path="res://scripts/start.gd" id="1_bodal"]
+[ext_resource type="Theme" uid="uid://b25fcicrd3wwt" path="res://random assets/default.tres" id="1_u80x2"]
+[ext_resource type="Texture2D" uid="uid://cs8kah7bbnegp" path="res://assets/Untitled_Artwork.png" id="2_bodal"]
+
 [node name="Start" type="Node2D" unique_id=1876381271]
+script = ExtResource("1_bodal")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1480343519]
 offset_left = -133.0
 offset_top = -80.0
 offset_right = 1312.0
 offset_bottom = 749.0
+color = Color(0.98039216, 0.7607843, 0.20392157, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1158674287]
-offset_right = 1211.0
+offset_left = 52.0
+offset_right = 1263.0
 offset_bottom = 189.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 100
-text = "The game can be start"
+text = "out of this dimension"
+
+[node name="start" type="Button" parent="." unique_id=650704883]
+offset_left = 228.0
+offset_top = 241.0
+offset_right = 863.4783
+offset_bottom = 415.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = ExtResource("1_u80x2")
+text = "start"
+
+[node name="options" type="Button" parent="." unique_id=2144999731]
+offset_left = 234.0
+offset_top = 450.0
+offset_right = 865.8261
+offset_bottom = 623.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = ExtResource("1_u80x2")
+text = "quick start"
+
+[node name="UntitledArtwork" type="Sprite2D" parent="." unique_id=514090621]
+position = Vector2(-887, 805)
+texture = ExtResource("2_bodal")
+
+[connection signal="button_up" from="start" to="." method="_on_start_button_up"]

@@ -1,0 +1,20 @@
+[gd_resource type="Theme" format=3 uid="uid://b25fcicrd3wwt"]
+
+[ext_resource type="FontFile" uid="uid://h3m3gsfaavle" path="res://random assets/font.ttf" id="1_bvxxa"]
+[ext_resource type="StyleBox" uid="uid://dvk3hcsfjvgk0" path="res://random assets/defaultStylebox.tres" id="2_yibjn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvxxa"]
+bg_color = Color(0.54509807, 0.627451, 0.34117648, 1)
+border_width_top = 20
+border_color = Color(0.31764707, 0.39607844, 0.22352941, 0)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[resource]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_bvxxa")
+Button/styles/hover = ExtResource("2_yibjn")
+Button/styles/normal = ExtResource("2_yibjn")
+Button/styles/pressed = SubResource("StyleBoxFlat_bvxxa")
