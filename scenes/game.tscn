@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="4_lbhrr"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="5_iywne"]
+[ext_resource type="Script" uid="uid://cxjff7owyceba" path="res://scripts/game_manager.gd" id="5_iywne"]
+[ext_resource type="Texture2D" uid="uid://cs8kah7bbnegp" path="res://assets/Untitled_Artwork.png" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="6_p57ef"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_feb5d"]
 vertices = PackedVector2Array(841.52344, -1471.8672, 1116.9609, 8.953125, -2663.4219, -5.953125, -2593.4297, -1237.1719, -940.27344, -1669.8516)
@@ -19,7 +21,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-2603, -1245, -2674, 4,
 navigation_polygon = SubResource("NavigationPolygon_feb5d")
 
 [node name="enemy" parent="." unique_id=1635071808 node_paths=PackedStringArray("Goal") instance=ExtResource("1_feb5d")]
-position = Vector2(582, -173)
+position = Vector2(1115, -892)
 Goal = NodePath("../player")
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("1_80nbo")]
@@ -53,5 +55,11 @@ position = Vector2(-795, -1782)
 
 [node name="game_manager" type="Node2D" parent="." unique_id=474106210]
 script = ExtResource("5_iywne")
+
+[node name="UntitledArtwork" type="Sprite2D" parent="." unique_id=944416996]
+position = Vector2(1921, -397)
+texture = ExtResource("6_p57ef")
+[node name="house" parent="." unique_id=273667713 instance=ExtResource("6_p57ef")]
+position = Vector2(329, -196)
 
 [connection signal="player_entered" from="portal" to="game_manager" method="_on_portal_player_entered"]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cn2rabxmse2ls"]
+
+[ext_resource type="Script" path="res://scripts/house.gd" id="1_d7po0"]
+[ext_resource type="Texture2D" uid="uid://cwhtqjs1hgygk" path="res://art/house.png" id="2_qtlar"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_qtlar"]
+points = PackedVector2Array(541, -509, -141, -576, -535, -234, -526, 488, 489, 497)
+
+[node name="house" type="AnimatableBody2D" unique_id=273667713]
+scale = Vector2(0.22, 0.22)
+script = ExtResource("1_d7po0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=610835347]
+texture = ExtResource("2_qtlar")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=213612028]
+shape = SubResource("ConvexPolygonShape2D_qtlar")
