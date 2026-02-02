@@ -1,6 +1,6 @@
 extends Node2D
 
-const START = preload("res://scenes/game.tscn")
+const START = preload("res://scenes/level_1.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
