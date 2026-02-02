@@ -24,16 +24,16 @@ Goal = NodePath("../player")
 position = Vector2(-27, -123)
 
 [node name="tree2" parent="." unique_id=1956730079 instance=ExtResource("1_e2o6t")]
-position = Vector2(98, -369)
+position = Vector2(-1371, -535)
 
 [node name="tree4" parent="." unique_id=1082649861 instance=ExtResource("1_e2o6t")]
-position = Vector2(-126, -711)
+position = Vector2(-863, -785)
 
 [node name="tree3" parent="." unique_id=593895605 instance=ExtResource("1_e2o6t")]
-position = Vector2(539, -573)
+position = Vector2(-1073, -291)
 
 [node name="tree" parent="." unique_id=1293499122 instance=ExtResource("1_e2o6t")]
-position = Vector2(-590, -214)
+position = Vector2(-598, -151)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=743750651]
 
