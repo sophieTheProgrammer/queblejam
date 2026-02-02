@@ -2,8 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://g7huycvsknj0" path="res://art/tree.png" id="1_avsvi"]
 
+<<<<<<< Updated upstream
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avsvi"]
 size = Vector2(566, 378)
+=======
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
+radius = 68.0
+height = 257.49997
+>>>>>>> Stashed changes
 
 [node name="tree" type="AnimatableBody2D" unique_id=1956730079]
 
@@ -12,5 +18,12 @@ scale = Vector2(0.44659784, 0.3801945)
 texture = ExtResource("1_avsvi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1530915941]
+<<<<<<< Updated upstream
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_avsvi")
+=======
+position = Vector2(2.9999995, -6.0000005)
+rotation = 1.5707964
+scale = Vector2(0.8, 0.8)
+shape = SubResource("CapsuleShape2D_avsvi")
+>>>>>>> Stashed changes
