@@ -1,15 +1,18 @@
 [gd_scene format=3 uid="uid://ciuakvp37r8bx"]
 
-[ext_resource type="Script" uid="uid://bdj0i58yreqs3" path="res://enemy.gd" id="1_7p1mj"]
+[ext_resource type="Script" uid="uid://bdj0i58yreqs3" path="res://scripts/enemy.gd" id="1_7p1mj"]
 
-[node name="enemy" type="CharacterBody2D" unique_id=1635071808]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7p1mj"]
+size = Vector2(25, 24)
+
+[node name="enemy" type="CharacterBody2D" unique_id=1707054168]
 script = ExtResource("1_7p1mj")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1768919789]
 offset_left = -63.0
-offset_top = -54.0
+offset_top = -60.0
 offset_right = 64.0
-offset_bottom = 66.0
+offset_bottom = 60.0
 color = Color(0.782125, 0, 0.09272816, 1)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=506269665]
@@ -18,4 +21,14 @@ debug_enabled = true
 [node name="Timer" type="Timer" parent="." unique_id=1739188031]
 autostart = true
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1831516010]
+shape = SubResource("RectangleShape2D_7p1mj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=635515735]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1743671235]
+scale = Vector2(3.18, 3.18)
+shape = SubResource("RectangleShape2D_7p1mj")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

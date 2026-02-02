@@ -4,32 +4,38 @@
 [ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="1_feb5d"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_80nbo"]
-
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_feb5d"]
-vertices = PackedVector2Array(983.65625, 36.570313, -871.10156, -68.109375, -635.8828, -527.71875, 1186.3203, -645.09375)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-648, -526, -887, -59, 991, 47, 1200, -656, -663, -536)])
+vertices = PackedVector2Array(1207.2734, -1383.3438, 1097.7578, -10.0234375, -1166.1797, -16.976563, -1757.8828, -754.6328, -937.0781, -1669.3906)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-1771, -755, -1171, -7, 1107, 0, 1218, -1392, -941, -1680)])
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_80nbo"]
 
 [node name="game" type="Node2D" unique_id=200994837]
 
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1527148839]
+navigation_polygon = SubResource("NavigationPolygon_feb5d")
+
 [node name="enemy" parent="." unique_id=1635071808 node_paths=PackedStringArray("Goal") instance=ExtResource("1_feb5d")]
-position = Vector2(198, -188)
+position = Vector2(582, -173)
 Goal = NodePath("../player")
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("1_80nbo")]
-position = Vector2(-251, -334)
+position = Vector2(-27, -123)
+
+[node name="tree2" parent="." unique_id=1956730079 instance=ExtResource("1_e2o6t")]
+position = Vector2(98, -369)
+
+[node name="tree4" parent="." unique_id=1082649861 instance=ExtResource("1_e2o6t")]
+position = Vector2(-126, -711)
+
+[node name="tree3" parent="." unique_id=593895605 instance=ExtResource("1_e2o6t")]
+position = Vector2(539, -573)
 
 [node name="tree" parent="." unique_id=1293499122 instance=ExtResource("1_e2o6t")]
 position = Vector2(-590, -214)
-
-[node name="tree" parent="tree" unique_id=1956730079 instance=ExtResource("1_e2o6t")]
-position = Vector2(1235, -178)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=743750651]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=260387551]
 shape = SubResource("WorldBoundaryShape2D_80nbo")
-
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1527148839]
-navigation_polygon = SubResource("NavigationPolygon_feb5d")

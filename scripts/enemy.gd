@@ -1,16 +1,23 @@
 extends CharacterBody2D
 const movement_speed= 10000.0
+const RESET = preload("res://scenes/game.tscn")
 @export var Goal: Node = null
+@onready var navigation: NavigationAgent2D = $NavigationAgent2D
+@onready var timer: Timer = $Timer
 func _ready() -> void:
-	$NavigationAgent2D.target_position = Goal.global_position
+	navigation.target_position = Goal.global_position
 
 func _physics_process (delta: float) -> void:
-	if !$NavigationAgent2D.is_target_reached():
-		var nav_point_direction = to_local($NavigationAgent2D.get_next_path_position()).normalized()
+	if !navigation.is_target_reached():
+		var nav_point_direction = to_local(navigation.get_next_path_position()).normalized()
 		velocity = nav_point_direction * movement_speed * delta
 		move_and_slide()
 
 func _on_timer_timeout() -> void:
-	if $NavigationAgent2D.target_position != Goal.global_position:
-		$NavigationAgent2D.target_position = Goal.global_position
-		$Timer.start()
+	if navigation.target_position != Goal.global_position:
+		navigation.target_position = Goal.global_position
+		timer.start()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	get_tree().reload_current_scene()
