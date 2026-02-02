@@ -3,15 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://g7huycvsknj0" path="res://art/tree.png" id="1_avsvi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avsvi"]
-size = Vector2(220, 148)
+size = Vector2(566, 378)
 
 [node name="tree" type="AnimatableBody2D" unique_id=1956730079]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1303620596]
-position = Vector2(-3.8146973e-06, 7.6293945e-06)
-scale = Vector2(0.17577592, 0.1496403)
+scale = Vector2(0.44659784, 0.3801945)
 texture = ExtResource("1_avsvi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1530915941]
-position = Vector2(7, -9)
+position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_avsvi")

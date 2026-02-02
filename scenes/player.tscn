@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dvnooeo6sj0ry" path="res://art/robot.png" id="2_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
-size = Vector2(102, 177)
+size = Vector2(102, 193.5)
 
 [node name="player" type="CharacterBody2D" unique_id=575009404]
 script = ExtResource("1_3vyb7")
@@ -19,7 +19,7 @@ zoom = Vector2(0.51, 0.51)
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1570286545]
-position = Vector2(0, 34)
+position = Vector2(0, 42.25)
 shape = SubResource("RectangleShape2D_3vyb7")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1429330909]
