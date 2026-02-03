@@ -46,4 +46,6 @@ text = "quick start"
 position = Vector2(-887, 805)
 texture = ExtResource("2_bodal")
 
+[connection signal="button_down" from="start" to="." method="_on_start_button_down"]
 [connection signal="button_up" from="start" to="." method="_on_start_button_up"]
+[connection signal="button_down" from="options" to="." method="_on_options_button_down"]
