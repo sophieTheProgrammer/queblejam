@@ -11,7 +11,8 @@ var last_floor = false  # Last frame's on-floor state
 var jumping = false
 const ACCELERATION = 4000
 const DECCELERATION = 4000
-@onready var sprite = $Sprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
 func _ready() -> void:
 	pass
 func _physics_process(delta: float) -> void:
