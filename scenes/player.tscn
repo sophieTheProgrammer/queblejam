@@ -3,8 +3,14 @@
 [ext_resource type="Script" uid="uid://0o105le8esnq" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://dvnooeo6sj0ry" path="res://art/robot.png" id="2_g2els"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
+size = Vector2(102, 255)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
 size = Vector2(102, 193.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(152.18666, 87.93544)
 
 [node name="player" type="CharacterBody2D" unique_id=575009404]
 script = ExtResource("1_3vyb7")
@@ -20,17 +26,24 @@ position_smoothing_enabled = true
 position_smoothing_speed = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1570286545]
-position = Vector2(0, 42.25)
-shape = SubResource("RectangleShape2D_3vyb7")
+position = Vector2(0, 46.5)
+shape = SubResource("RectangleShape2D_qhqgy")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1429330909]
-collision_layer = 3
-collision_mask = 3
+[node name="Enemy Collision" type="Area2D" parent="." unique_id=1429330909]
+collision_layer = 2
+collision_mask = 2
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1270853025]
-position = Vector2(0, 1.1368684e-13)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy Collision" unique_id=1270853025]
+position = Vector2(4, 20.000004)
 scale = Vector2(0.667, 0.91)
 shape = SubResource("RectangleShape2D_3vyb7")
+
+[node name="Tree Collision" type="Area2D" parent="." unique_id=1853434093]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Tree Collision" unique_id=1924000800]
+position = Vector2(-0.7542496, 133)
+scale = Vector2(0.667, 0.91)
+shape = SubResource("RectangleShape2D_g2els")
 
 [node name="CoyoteTimer" type="Timer" parent="." unique_id=1055073992]
 

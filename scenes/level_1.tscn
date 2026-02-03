@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://fqnpaxidr784" path="res://scenes/player.tscn" id="2_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="3_15mv3"]
 [ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="4_e3sih"]
-[ext_resource type="Script" uid="uid://cxjff7owyceba" path="res://scripts/game_manager.gd" id="5_2y5yt"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="5_2y5yt"]
 [ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="6_2os1m"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_feb5d"]
@@ -17,10 +17,11 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-5024, -3478, -5053, 27
 [node name="leve-1" type="Node2D" unique_id=200994837]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1527148839]
+position = Vector2(-8, -141)
 navigation_polygon = SubResource("NavigationPolygon_feb5d")
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("2_pa8r4")]
-position = Vector2(-27, -123)
+position = Vector2(-25, 111)
 
 [node name="Tree" type="Node" parent="." unique_id=564110298]
 
@@ -36,8 +37,11 @@ position = Vector2(-240, -879)
 [node name="tree8" parent="Tree" unique_id=1846803899 instance=ExtResource("3_15mv3")]
 position = Vector2(-2261, -1772)
 
+[node name="tree10" parent="Tree" unique_id=87462111 instance=ExtResource("3_15mv3")]
+position = Vector2(-3009, -2977)
+
 [node name="tree9" parent="Tree" unique_id=738252183 instance=ExtResource("3_15mv3")]
-position = Vector2(-2349, -3311)
+position = Vector2(-2290, -3431)
 
 [node name="tree6" parent="Tree" unique_id=1383033411 instance=ExtResource("3_15mv3")]
 position = Vector2(-1461, -2337)
