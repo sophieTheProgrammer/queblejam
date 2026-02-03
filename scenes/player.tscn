@@ -2,40 +2,35 @@
 
 [ext_resource type="Script" uid="uid://0o105le8esnq" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://dk1non1ndpqjc" path="res://art/idle robot.png" id="2_g2els"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qhqgy"]
-load_path = "res://.godot/imported/robot animated.PNG-18e60c787af94c3bf369e7e497dd3c51.ctex"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
-atlas = SubResource("CompressedTexture2D_qhqgy")
-region = Rect2(0, 0, 32, 32)
+[ext_resource type="Texture2D" uid="uid://cnomp5jkwq561" path="res://art/robot jump.png" id="2_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
-atlas = SubResource("CompressedTexture2D_qhqgy")
-region = Rect2(32, 0, 32, 32)
+atlas = ExtResource("2_qhqgy")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
-atlas = SubResource("CompressedTexture2D_qhqgy")
-region = Rect2(64, 0, 32, 32)
+atlas = ExtResource("2_qhqgy")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
-atlas = SubResource("CompressedTexture2D_qhqgy")
-region = Rect2(96, 0, 32, 32)
+atlas = ExtResource("2_qhqgy")
+region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
-atlas = ExtResource("2_g2els")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("2_qhqgy")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
 atlas = ExtResource("2_g2els")
 region = Rect2(64, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_fjrip"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qhqgy")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dqkch")
 }, {
@@ -44,21 +39,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
 }],
 "loop": true,
 "name": &"floating",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fjrip")
+"texture": SubResource("AtlasTexture_smehm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_smehm")
+"texture": SubResource("AtlasTexture_fjrip")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 3.0
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
@@ -71,9 +69,9 @@ script = ExtResource("1_3vyb7")
 position = Vector2(2, 4.7683716e-07)
 scale = Vector2(11.586914, 11.586914)
 sprite_frames = SubResource("SpriteFrames_fjrip")
-animation = &"idle"
+animation = &"floating"
 autoplay = "idle"
-frame_progress = 0.61262566
+frame_progress = 0.61936426
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1234617087]
 offset = Vector2(0, -200)

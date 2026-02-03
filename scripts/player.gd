@@ -59,7 +59,14 @@ func handle_jump(delta):
 			velocity.y += fast_fall
 		if velocity.y > 0:
 			velocity.y += fast_fall
-		
+	
+	# jump animation here
+	if jumping:
+		print('play jumping animation')
+		sprite.play('floating')
+	else:
+		sprite.play('idle')
+	
 	last_floor = is_on_floor()
 
 func flip_sprite(direction):
