@@ -8,7 +8,7 @@ var tree_dead := false
 var tree_alive := false
 var POSITION
 const FALL_POSITION = 2000
-const TIME_TILL_ALIVE = 4
+const TIME_TILL_ALIVE = 7
 const TIME_TILL_DEATH = 3
 var speed = 700
 const MAX_SPEED = 10000
@@ -21,7 +21,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("ui_down") and Global.debug:
 		position.y = POSITION
 		collision.disabled = false
 		area.monitoring = true
