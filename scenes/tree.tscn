@@ -1,19 +1,45 @@
 [gd_scene format=3 uid="uid://bey60bmk2kegn"]
 
 [ext_resource type="Texture2D" uid="uid://g7huycvsknj0" path="res://art/tree.png" id="1_avsvi"]
+[ext_resource type="Script" uid="uid://b1g2w6m5hq3fr" path="res://scripts/tree.gd" id="1_vplca"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
-radius = 251.24997
-height = 637.49994
+radius = 306.24997
+height = 799.99994
 
-[node name="tree" type="AnimatableBody2D" unique_id=1956730079]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vplca"]
+radius = 387.49997
+height = 946.87494
+
+[node name="tree" type="AnimatableBody2D" unique_id=1391525660]
+script = ExtResource("1_vplca")
+
+[node name="Die Timer" type="Timer" parent="." unique_id=292614544]
+one_shot = true
+
+[node name="Respawn Timer" type="Timer" parent="." unique_id=1730369753]
+one_shot = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1303620596]
-scale = Vector2(0.44659784, 0.3801945)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_avsvi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1530915941]
-position = Vector2(2.9999995, -6.0000005)
+position = Vector2(-5.3290705e-14, -15)
 rotation = 1.5707964
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.8000001, 0.8000001)
 shape = SubResource("CapsuleShape2D_avsvi")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1202298251]
+rotation = -3.1415925
+scale = Vector2(0.64000005, 0.64000005)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1768289540]
+position = Vector2(1.5258789e-05, 67.187485)
+rotation = 1.5707964
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("CapsuleShape2D_vplca")
+
+[connection signal="timeout" from="Die Timer" to="." method="_on_die_timer_timeout"]
+[connection signal="timeout" from="Respawn Timer" to="." method="_on_respawn_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

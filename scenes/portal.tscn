@@ -8,16 +8,16 @@ radius = 42.0119
 [node name="portal" type="Node2D" unique_id=452576932]
 script = ExtResource("1_v0xau")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1274837443]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=531295457]
-shape = SubResource("CircleShape2D_ppl40")
-
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1470417296]
 offset_left = -43.0
 offset_top = -42.0
 offset_right = 48.0
 offset_bottom = 40.0
 color = Color(1, 1, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1274837443]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=531295457]
+shape = SubResource("CircleShape2D_ppl40")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
