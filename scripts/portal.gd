@@ -1,6 +1,6 @@
 extends Node2D
+@export var DESTINATION: int
 
-signal player_entered
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -13,7 +13,5 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print(body)
 	if body is CharacterBody2D:
-		print("YAYY")
-		player_entered.emit()
+		Global.load_scene(DESTINATION)

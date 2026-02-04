@@ -64,7 +64,8 @@ offset_bottom = 40.0
 color = Color(0.5709799, 0.5709799, 0.5709799, 1)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("4_e3sih")]
-position = Vector2(-2562, -3897)
+position = Vector2(468, -290)
+DESTINATION = 2
 
 [node name="game_manager" type="Node2D" parent="." unique_id=474106210]
 script = ExtResource("5_2y5yt")
@@ -120,5 +121,3 @@ Goal = NodePath("../../player")
 [node name="enemy6" parent="Node" unique_id=1714825732 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
 position = Vector2(-3565, -1191)
 Goal = NodePath("../../player")
-
-[connection signal="player_entered" from="portal" to="game_manager" method="_on_portal_player_entered"]

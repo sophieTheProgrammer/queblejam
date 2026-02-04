@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dyajqxdg4au62"]
+
+[ext_resource type="PackedScene" uid="uid://cna47e8fadqxa" path="res://scenes/game_manager.tscn" id="1_nuoa6"]
+[ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="2_kri1i"]
+[ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="3_5qbqa"]
+[ext_resource type="PackedScene" uid="uid://fqnpaxidr784" path="res://scenes/player.tscn" id="4_gi1h7"]
+[ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="5_jjnc2"]
+
+[node name="testing" type="Node2D" unique_id=324064504]
+
+[node name="game_manager" parent="." unique_id=1629136442 instance=ExtResource("1_nuoa6")]
+
+[node name="enemy" parent="." unique_id=1707054168 node_paths=PackedStringArray("Goal") instance=ExtResource("2_kri1i")]
+position = Vector2(262, 108)
+Goal = NodePath("../portal")
+
+[node name="house" parent="." unique_id=273667713 instance=ExtResource("3_5qbqa")]
+position = Vector2(-353, 283)
+
+[node name="player" parent="." unique_id=575009404 instance=ExtResource("4_gi1h7")]
+position = Vector2(-338, -10)
+
+[node name="portal" parent="." unique_id=452576932 instance=ExtResource("5_jjnc2")]
+position = Vector2(-331, -236)
+DESTINATION = 1
