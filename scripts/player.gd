@@ -62,7 +62,6 @@ func handle_jump(delta):
 	
 	# jump animation here
 	if jumping:
-		print('play jumping animation')
 		sprite.play('floating')
 	else:
 		sprite.play('idle')
