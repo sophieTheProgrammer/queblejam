@@ -26,34 +26,34 @@ position = Vector2(-25, 111)
 [node name="Tree" type="Node" parent="." unique_id=564110298]
 
 [node name="tree" parent="Tree" unique_id=1293499122 instance=ExtResource("3_15mv3")]
-position = Vector2(-598, -151)
+position = Vector2(-598, -107)
 
 [node name="tree2" parent="Tree" unique_id=1956730079 instance=ExtResource("3_15mv3")]
 position = Vector2(-2110, -690)
 
 [node name="tree3" parent="Tree" unique_id=593895605 instance=ExtResource("3_15mv3")]
-position = Vector2(-240, -879)
+position = Vector2(-112, -851)
 
 [node name="tree8" parent="Tree" unique_id=1846803899 instance=ExtResource("3_15mv3")]
 position = Vector2(-2261, -1772)
 
 [node name="tree10" parent="Tree" unique_id=87462111 instance=ExtResource("3_15mv3")]
-position = Vector2(-3009, -2977)
+position = Vector2(-3075, -2851)
 
 [node name="tree9" parent="Tree" unique_id=738252183 instance=ExtResource("3_15mv3")]
-position = Vector2(-2290, -3431)
+position = Vector2(-2340, -3216)
 
 [node name="tree6" parent="Tree" unique_id=1383033411 instance=ExtResource("3_15mv3")]
-position = Vector2(-1461, -2337)
+position = Vector2(-1592, -2292)
 
 [node name="tree7" parent="Tree" unique_id=1177807440 instance=ExtResource("3_15mv3")]
 position = Vector2(-769, -1958)
 
 [node name="tree5" parent="Tree" unique_id=1281635400 instance=ExtResource("3_15mv3")]
-position = Vector2(67, -2585)
+position = Vector2(29, -2336)
 
 [node name="tree4" parent="Tree" unique_id=1082649861 instance=ExtResource("3_15mv3")]
-position = Vector2(876, -2433)
+position = Vector2(831, -2087)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=743750651]
 
@@ -88,11 +88,11 @@ position = Vector2(-3073, -1921)
 scale = Vector2(1, 1)
 
 [node name="house3" parent="House" unique_id=1505400630 instance=ExtResource("6_2os1m")]
-position = Vector2(1709, -1844)
+position = Vector2(1643, -1557)
 scale = Vector2(1, 1)
 
 [node name="house2" parent="House" unique_id=381925926 instance=ExtResource("6_2os1m")]
-position = Vector2(644, -1334)
+position = Vector2(696, -1082)
 scale = Vector2(1, 1)
 
 [node name="house" parent="House" unique_id=822725947 instance=ExtResource("6_2os1m")]

@@ -1,2 +1,2 @@
 extends Node
-@export var debug = true
+@export var debug = 1
