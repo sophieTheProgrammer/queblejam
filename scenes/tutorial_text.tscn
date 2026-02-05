@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bp8jvagx1pkw5"]
+
+[ext_resource type="FontFile" path="res://assets/Valorax-lg25V.otf" id="1_1riog"]
+[ext_resource type="Script" path="res://scripts/tutorial_text.gd" id="1_3uon5"]
+
+[sub_resource type="Theme" id="Theme_52oo5"]
+default_font_size = 43
+
+[node name="RichTextLabel" type="RichTextLabel" unique_id=436433039]
+offset_right = 477.03702
+offset_bottom = 161.0
+theme = SubResource("Theme_52oo5")
+theme_override_colors/default_color = Color(0.8509804, 0.08627451, 0.08235294, 1)
+theme_override_fonts/normal_font = ExtResource("1_1riog")
+text = "testing text"
+script = ExtResource("1_3uon5")
