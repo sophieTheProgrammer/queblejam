@@ -8,8 +8,7 @@ const RESET = preload("res://scenes/level_1.tscn")
 var activated : bool = false
 
 func _ready() -> void:
-	if activation:
-		activation.body_entered.connect(activate)
+
 	navigation.target_position = Goal.global_position
 
 func _physics_process (delta: float) -> void:
@@ -23,11 +22,3 @@ func _on_timer_timeout() -> void:
 	if navigation.target_position != Goal.global_position && !Global.debug:
 		navigation.target_position = Goal.global_position
 		timer.start()
-		print("starting timer")
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if !Global.debug:
-		get_tree().reload_current_scene()
-
-func activate(body):
-	activated = true

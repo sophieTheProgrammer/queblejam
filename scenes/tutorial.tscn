@@ -3,67 +3,30 @@
 [ext_resource type="PackedScene" uid="uid://fqnpaxidr784" path="res://scenes/player.tscn" id="1_8ho6b"]
 [ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="2_ph3nu"]
 [ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="3_ph3nu"]
-[ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="4_4kmhl"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kmhl"]
-size = Vector2(327.16248, 262.1739)
-
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_4kmhl"]
-vertices = PackedVector2Array(1557.8516, 2648.9766, -844.4922, 2707.8281, -2965.6406, -2209.961, 4180.7266, -3241.4219, 7813.6406, 92.3125, 5394.672, 3403.9531)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(0, 4, 5)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(1557, 2659, 5399, 3415, 7827, 91, 4184, -3252, -2980, -2218, -851, 2718)])
 [ext_resource type="PackedScene" uid="uid://b7xavbirsinof" path="res://scenes/death.tscn" id="4_4kmhl"]
 [ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="5_cq4me"]
+[ext_resource type="FontFile" uid="uid://bt6syfcgpsp5i" path="res://random assets/Valorax-lg25V.otf" id="5_gbqnl"]
+[ext_resource type="Texture2D" uid="uid://db5hn5nd6p5ce" path="res://random assets/Screenshot 2026-02-04 at 6.34.23 PM.png" id="6_ckvwl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cq4me"]
 distance = 4.0000014
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6yjpi"]
 normal = Vector2(0.00028341007, -0.99999994)
-distance = -6878.9985
+distance = -10178.035
 
 [node name="tutorial" type="Node2D" unique_id=1205344489]
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("1_8ho6b")]
 position = Vector2(500, -2500)
 
-[node name="text" type="Node" parent="." unique_id=1531292137]
-
-[node name="trees" type="RichTextLabel" parent="text" unique_id=1504824620]
-offset_left = 3919.0
-offset_top = -3143.0
-offset_right = 5894.0
-offset_bottom = -2174.0
-text = "trees will fall after you stand on them for too long"
-
-[node name="dontfall" type="RichTextLabel" parent="text" unique_id=72647953]
-offset_left = 4012.0
-offset_top = -940.0
-offset_right = 5687.0
-offset_bottom = -399.0
-text = "don't fall!"
-
-[node name="jump" type="RichTextLabel" parent="text" unique_id=1491643755]
-offset_left = 1196.0
-offset_top = -3093.0
-offset_right = 2871.0
-offset_bottom = -2552.0
-text = "space to jump"
-
-[node name="wasd" type="RichTextLabel" parent="text" unique_id=1760828492]
-offset_left = -503.0
-offset_top = -3626.0
-offset_right = 1172.0
-offset_bottom = -3085.0
-text = "wasd/arrow keys to move"
-
 [node name="houses" type="Node" parent="." unique_id=1386070607]
+
+[node name="house9" parent="houses" unique_id=273667713 instance=ExtResource("2_ph3nu")]
+position = Vector2(6387, -1864)
 
 [node name="house3" parent="houses" unique_id=1050645927 instance=ExtResource("2_ph3nu")]
 position = Vector2(3008, -2078)
-
-[node name="house3" parent="houses/house3" unique_id=273667713 instance=ExtResource("2_ph3nu")]
-position = Vector2(3379, 214)
 
 [node name="house2" parent="houses" unique_id=895962117 instance=ExtResource("2_ph3nu")]
 position = Vector2(1752, -2029)
@@ -71,28 +34,98 @@ position = Vector2(1752, -2029)
 [node name="house" parent="houses" unique_id=1621905291 instance=ExtResource("2_ph3nu")]
 position = Vector2(476, -2003)
 
+[node name="house4" parent="houses" unique_id=1251941796 instance=ExtResource("2_ph3nu")]
+position = Vector2(6387, -1864)
+
+[node name="house5" parent="houses" unique_id=114246913 instance=ExtResource("2_ph3nu")]
+position = Vector2(8559, -1938)
+
+[node name="house6" parent="houses" unique_id=1769033054 instance=ExtResource("2_ph3nu")]
+position = Vector2(3008, -2078)
+
+[node name="house7" parent="houses" unique_id=781592711 instance=ExtResource("2_ph3nu")]
+position = Vector2(1752, -2029)
+
+[node name="house8" parent="houses" unique_id=1203697595 instance=ExtResource("2_ph3nu")]
+position = Vector2(476, -2003)
+
+[node name="houses2" type="Node" parent="." unique_id=1372642599]
+
 [node name="trees" type="Node" parent="." unique_id=94419687]
 
 [node name="tree3" parent="trees" unique_id=1391525660 instance=ExtResource("3_ph3nu")]
-position = Vector2(4172, -1863)
+position = Vector2(4147, -1947)
 
-[node name="tree" parent="trees" unique_id=1956730079 instance=ExtResource("3_ph3nu")]
-position = Vector2(3670, 791)
-script = null
+[node name="tree4" parent="trees" unique_id=1491794486 instance=ExtResource("3_ph3nu")]
+position = Vector2(5305, -1887)
 
-[node name="enemy" parent="." unique_id=1707054168 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("4_4kmhl")]
-position = Vector2(5828, -26)
-Goal = NodePath("../player")
-activation = NodePath("activate")
+[node name="tree5" parent="trees" unique_id=731692842 instance=ExtResource("3_ph3nu")]
+position = Vector2(7537, -1849)
 
-[node name="activate" type="Area2D" parent="enemy" unique_id=1003307539]
-collision_layer = 4
-collision_mask = 4
+[node name="portal" parent="." unique_id=452576932 instance=ExtResource("5_cq4me")]
+position = Vector2(9375, -2832)
+DESTINATION = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy/activate" unique_id=207871282]
-position = Vector2(-357.99994, 388)
-scale = Vector2(4.37, 4.37)
-shape = SubResource("RectangleShape2D_4kmhl")
+[node name="text" type="Node" parent="." unique_id=1531292137]
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1293484053]
-navigation_polygon = SubResource("NavigationPolygon_4kmhl")
+[node name="wasd" type="RichTextLabel" parent="text" unique_id=1760828492]
+z_index = -3
+offset_left = -358.0
+offset_top = -3092.0
+offset_right = 1552.0
+offset_bottom = -2551.0
+theme_override_colors/default_color = Color(0.8509804, 0.08627451, 0.08235294, 1)
+theme_override_fonts/normal_font = ExtResource("5_gbqnl")
+theme_override_font_sizes/normal_font_size = 150
+text = "use WASD/ARROW keys to move"
+
+[node name="trees fall" type="RichTextLabel" parent="text" unique_id=60911205]
+z_index = -3
+offset_left = 3195.0
+offset_top = -3152.0
+offset_right = 5383.0
+offset_bottom = -2396.0
+theme_override_colors/default_color = Color(0.8509804, 0.08627451, 0.08235294, 1)
+theme_override_fonts/normal_font = ExtResource("5_gbqnl")
+theme_override_font_sizes/normal_font_size = 150
+text = "trees will fall if you stand on them for too long!"
+
+[node name="trees fall2" type="RichTextLabel" parent="text" unique_id=1317165122]
+z_index = -3
+offset_left = 3291.0
+offset_top = -1586.0
+offset_right = 5479.0
+offset_bottom = -830.0
+theme_override_colors/default_color = Color(0.8509804, 0.08627451, 0.08235294, 1)
+theme_override_fonts/normal_font = ExtResource("5_gbqnl")
+theme_override_font_sizes/normal_font_size = 150
+text = "DON'T FALL!"
+
+[node name="space to jump" type="RichTextLabel" parent="text" unique_id=652591290]
+z_index = -3
+offset_left = 964.0
+offset_top = -2678.0
+offset_right = 2874.0
+offset_bottom = -2137.0
+theme_override_colors/default_color = Color(0.8509804, 0.08627451, 0.08235294, 1)
+theme_override_fonts/normal_font = ExtResource("5_gbqnl")
+theme_override_font_sizes/normal_font_size = 150
+text = "space to JUMP"
+
+[node name="Screenshot20260204At6_34_23Pm" type="Sprite2D" parent="text" unique_id=725655668]
+position = Vector2(-499, -2276)
+texture = ExtResource("6_ckvwl")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1766777922]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1021755966]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_cq4me")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1771770985]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_6yjpi")
+
+[node name="Death" parent="StaticBody2D" unique_id=1216396373 instance=ExtResource("4_4kmhl")]
+position = Vector2(3273, 204)
+scale = Vector2(20, 1)
