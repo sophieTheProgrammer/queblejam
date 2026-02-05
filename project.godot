@@ -23,6 +23,7 @@ SfxPlayer="*uid://obmsvc6rxqoy"
 
 [display]
 
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [gui]
