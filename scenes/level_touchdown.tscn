@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://jb1dkmkqemmv"]
+
+[ext_resource type="PackedScene" uid="uid://fqnpaxidr784" path="res://scenes/player.tscn" id="1_sc5ue"]
+[ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="2_egi6p"]
+[ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="3_n2bmc"]
+[ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="4_iccs0"]
+[ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="5_ghss4"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4nkto"]
+vertices = PackedVector2Array(281.85156, -5129.0625, 158.22656, 11.9765625, -4516.383, 5.0078125, -4704.758, -4837.961, -1863.1172, -6267.742)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-4715, -4844, -4526, 15, 168, 22, 292, -5135, -1863, -6279)])
+
+[sub_resource type="Theme" id="Theme_4nkto"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fcfvj"]
+distance = -40.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pa8r4"]
+distance = -163.00014
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_15mv3"]
+normal = Vector2(0.00028341007, -0.99999994)
+distance = -4722.7686
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nkto"]
+size = Vector2(5124.75, 394)
+
+[node name="level_touchdown" type="Node2D" unique_id=985326687]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1076676205]
+position = Vector2(4542, -11)
+navigation_polygon = SubResource("NavigationPolygon_4nkto")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=326295590]
+offset_left = 1953.0
+offset_top = -4022.0
+offset_right = 2562.0
+offset_bottom = -3612.0
+theme = SubResource("Theme_4nkto")
+theme_override_font_sizes/normal_font_size = 100
+text = "Wait for it..."
+
+[node name="player" parent="." unique_id=575009404 instance=ExtResource("1_sc5ue")]
+position = Vector2(159, -3130)
+
+[node name="portal" parent="." unique_id=452576932 instance=ExtResource("2_egi6p")]
+position = Vector2(4401, -1817)
+DESTINATION = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=850290715]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1283768747]
+shape = SubResource("WorldBoundaryShape2D_fcfvj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=345422280]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_pa8r4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1343438125]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_15mv3")
+
+[node name="Death" type="Area2D" parent="StaticBody2D" unique_id=1092303230]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Death" type="CollisionShape2D" parent="StaticBody2D/Death" unique_id=1203118574]
+position = Vector2(2324, -91)
+shape = SubResource("RectangleShape2D_4nkto")
+
+[node name="Tree" type="Node" parent="." unique_id=1027461552]
+
+[node name="tree" parent="Tree" unique_id=1391525660 instance=ExtResource("3_n2bmc")]
+position = Vector2(1024, -2941)
+
+[node name="tree2" parent="Tree" unique_id=2031004561 instance=ExtResource("3_n2bmc")]
+position = Vector2(1675, -3115)
+
+[node name="tree3" parent="Tree" unique_id=1921199110 instance=ExtResource("3_n2bmc")]
+position = Vector2(2326, -3263)
+
+[node name="tree4" parent="Tree" unique_id=1740709721 instance=ExtResource("3_n2bmc")]
+position = Vector2(2327, -787)
+
+[node name="tree5" parent="Tree" unique_id=797811607 instance=ExtResource("3_n2bmc")]
+position = Vector2(3610, -1046)
+
+[node name="tree6" parent="Tree" unique_id=193651190 instance=ExtResource("3_n2bmc")]
+position = Vector2(2967, -910)
+
+[node name="House" type="Node" parent="." unique_id=1418792038]
+
+[node name="house" parent="House" unique_id=273667713 instance=ExtResource("4_iccs0")]
+position = Vector2(305, -2589)
+scale = Vector2(1, 1)
+
+[node name="house2" parent="House" unique_id=473170789 instance=ExtResource("4_iccs0")]
+position = Vector2(4351, -1030)
+scale = Vector2(1, 1)
+
+[node name="house3" parent="House" unique_id=2011144360 instance=ExtResource("4_iccs0")]
+position = Vector2(2948, -3929)
+scale = Vector2(1, 1)
+
+[node name="house4" parent="House" unique_id=408789223 instance=ExtResource("4_iccs0")]
+position = Vector2(2968, -4764)
+scale = Vector2(1, 1)
+
+[node name="house5" parent="House" unique_id=1581812665 instance=ExtResource("4_iccs0")]
+position = Vector2(4260, -4331)
+scale = Vector2(1, 1)
+
+[node name="Enemy" type="Node" parent="." unique_id=2057262548]
+
+[node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal") instance=ExtResource("5_ghss4")]
+position = Vector2(2306, -5321)
+Goal = NodePath("../../player")
+
+[connection signal="area_entered" from="StaticBody2D/Death" to="player" method="_on_death_area_entered"]
