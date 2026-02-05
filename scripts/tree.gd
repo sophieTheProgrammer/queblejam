@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 			area.monitoring = true
 			speed = 700
 			tree_alive = false
-func _on_area_2d_area_entered(area: Area2D) -> void:
+func _on_area_2d_area_entered(_area: Area2D) -> void:
 	if death_timer.is_stopped():
 		death_timer.start(TIME_TILL_DEATH)
 		respawn_timer.start(TIME_TILL_ALIVE)
