@@ -15,9 +15,6 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-5387, -4254, -5185, -1
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fcfvj"]
 distance = -40.0
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pa8r4"]
-distance = -1751.0
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_15mv3"]
 normal = Vector2(0.00028341007, -0.99999994)
 distance = -6584.985
@@ -32,17 +29,13 @@ navigation_polygon = SubResource("NavigationPolygon_4nkto")
 position = Vector2(507, -3214)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("4_e3sih")]
-position = Vector2(-455, -3604)
+position = Vector2(-1949, -3853)
 DESTINATION = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1034328894]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1161863923]
 shape = SubResource("WorldBoundaryShape2D_fcfvj")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=714111978]
-rotation = 1.5707964
-shape = SubResource("WorldBoundaryShape2D_pa8r4")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1990887448]
 rotation = -1.5707964
@@ -79,6 +72,13 @@ position = Vector2(2372, -1949)
 
 [node name="house5" parent="House" unique_id=1901791013 instance=ExtResource("6_2os1m")]
 position = Vector2(5156, -1102)
+
+[node name="house6" parent="House" unique_id=273667713 instance=ExtResource("6_2os1m")]
+position = Vector2(-1462.9995, -2969)
+scale = Vector2(0.22, 0.22)
+
+[node name="house7" parent="House" unique_id=1675529710 instance=ExtResource("6_2os1m")]
+position = Vector2(-1462.9995, -2969)
 
 [node name="Enemy" type="Node" parent="." unique_id=1054087828]
 
