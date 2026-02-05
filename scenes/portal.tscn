@@ -1,19 +1,41 @@
 [gd_scene format=3 uid="uid://c8nmx000lemsv"]
 
 [ext_resource type="Script" uid="uid://cihsstjtna3kd" path="res://scripts/portal.gd" id="1_v0xau"]
+[ext_resource type="Texture2D" uid="uid://bj5sjhhwdggeq" path="res://art/portal.PNG" id="2_1ffj6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ffj6"]
+atlas = ExtResource("2_1ffj6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr6l0"]
+atlas = ExtResource("2_1ffj6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d4jfq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ffj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jr6l0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ppl40"]
-radius = 42.0119
+radius = 144.0
 
 [node name="portal" type="Node2D" unique_id=452576932]
 script = ExtResource("1_v0xau")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1470417296]
-offset_left = -43.0
-offset_top = -42.0
-offset_right = 48.0
-offset_bottom = 40.0
-color = Color(1, 1, 0, 1)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1907998411]
+position = Vector2(2, 0)
+scale = Vector2(23.4375, 23.4375)
+sprite_frames = SubResource("SpriteFrames_d4jfq")
+autoplay = "default"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1274837443]
 collision_layer = 4

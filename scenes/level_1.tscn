@@ -16,7 +16,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-5387, -4254, -5185, -1
 distance = -40.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pa8r4"]
-distance = -764.0001
+distance = -1751.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_15mv3"]
 normal = Vector2(0.00028341007, -0.99999994)
@@ -29,10 +29,10 @@ position = Vector2(4542, -11)
 navigation_polygon = SubResource("NavigationPolygon_4nkto")
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("2_pa8r4")]
-position = Vector2(6326, -1474)
+position = Vector2(507, -3214)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("4_e3sih")]
-position = Vector2(-393, -3445)
+position = Vector2(-455, -3604)
 DESTINATION = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1034328894]
