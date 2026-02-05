@@ -1,5 +1,5 @@
 extends Node
-@export var debug = true
+@export var debug = false
 
 const LEVEL_1 = preload("res://scenes/level_1.tscn")
 const LEVEL_2 = preload("res://scenes/testing.tscn")

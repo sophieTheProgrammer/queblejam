@@ -77,3 +77,7 @@ func flip_sprite(direction):
 
 func _on_coyote_timer_timeout() -> void:
 	coyote = false
+
+
+func _on_death_area_entered(area: Area2D) -> void:
+	get_tree().reload_current_scene()

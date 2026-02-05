@@ -1,127 +1,106 @@
-[gd_scene format=3 uid="uid://ygmskydwuf8"]
+[gd_scene format=3 uid="uid://dcqh3cxvh6fn8"]
 
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="1_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://fqnpaxidr784" path="res://scenes/player.tscn" id="2_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="3_15mv3"]
 [ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="4_e3sih"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="5_2y5yt"]
 [ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="6_2os1m"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_feb5d"]
-vertices = PackedVector2Array(2746.4688, -3140.1484, 2977.2422, 19.992188, -5042.9063, 17, -5014.039, -3472.6797, -2362.8516, -5278.6797)
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4nkto"]
+vertices = PackedVector2Array(-1460.4063, -3543.289, 2097.9063, -2523.4766, 2069.1094, -1.9765625, -4139.0938, 8.9765625, -4178.867, -4206.2266)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-5024, -3478, -5053, 27, 2988, 30, 2756, -3147, -2364, -5290)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-4189, -4219, -4149, 19, 2079, 8, 2108, -2531, -1458, -3553)])
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_80nbo"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fcfvj"]
+distance = -40.0
 
-[node name="leve-1" type="Node2D" unique_id=200994837]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pa8r4"]
+distance = 366.0
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1527148839]
-position = Vector2(-8, -141)
-navigation_polygon = SubResource("NavigationPolygon_feb5d")
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_15mv3"]
+normal = Vector2(0.00028341007, -0.99999994)
+distance = -6584.985
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3sih"]
+size = Vector2(6859.375, 394)
+
+[node name="level_1" type="Node2D" unique_id=532896419]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1327585009]
+position = Vector2(4542, -11)
+navigation_polygon = SubResource("NavigationPolygon_4nkto")
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("2_pa8r4")]
-position = Vector2(-25, 111)
-
-[node name="Tree" type="Node" parent="." unique_id=564110298]
-
-[node name="tree" parent="Tree" unique_id=1293499122 instance=ExtResource("3_15mv3")]
-position = Vector2(-598, -107)
-
-[node name="tree2" parent="Tree" unique_id=1956730079 instance=ExtResource("3_15mv3")]
-position = Vector2(-2110, -690)
-
-[node name="tree3" parent="Tree" unique_id=593895605 instance=ExtResource("3_15mv3")]
-position = Vector2(-112, -851)
-
-[node name="tree8" parent="Tree" unique_id=1846803899 instance=ExtResource("3_15mv3")]
-position = Vector2(-2261, -1772)
-
-[node name="tree10" parent="Tree" unique_id=87462111 instance=ExtResource("3_15mv3")]
-position = Vector2(-3075, -2851)
-
-[node name="tree9" parent="Tree" unique_id=738252183 instance=ExtResource("3_15mv3")]
-position = Vector2(-2340, -3216)
-
-[node name="tree6" parent="Tree" unique_id=1383033411 instance=ExtResource("3_15mv3")]
-position = Vector2(-1592, -2292)
-
-[node name="tree7" parent="Tree" unique_id=1177807440 instance=ExtResource("3_15mv3")]
-position = Vector2(-769, -1958)
-
-[node name="tree5" parent="Tree" unique_id=1281635400 instance=ExtResource("3_15mv3")]
-position = Vector2(29, -2336)
-
-[node name="tree4" parent="Tree" unique_id=1082649861 instance=ExtResource("3_15mv3")]
-position = Vector2(831, -2087)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=743750651]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=260387551]
-shape = SubResource("WorldBoundaryShape2D_80nbo")
-
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=860932114]
-offset_left = -2600.0
-offset_top = -6.0
-offset_right = 3763.0
-offset_bottom = 40.0
-color = Color(0.5709799, 0.5709799, 0.5709799, 1)
+position = Vector2(6326, -1474)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("4_e3sih")]
-position = Vector2(468, -290)
+position = Vector2(585, -3382)
 DESTINATION = 2
 
-[node name="game_manager" type="Node2D" parent="." unique_id=474106210]
-script = ExtResource("5_2y5yt")
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1034328894]
 
-[node name="House" type="Node" parent="." unique_id=1416592367]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1161863923]
+shape = SubResource("WorldBoundaryShape2D_fcfvj")
 
-[node name="house6" parent="House" unique_id=273667713 instance=ExtResource("6_2os1m")]
-position = Vector2(-1322, -3664)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=714111978]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_pa8r4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1990887448]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_15mv3")
+
+[node name="Death" type="Area2D" parent="StaticBody2D" unique_id=1731097111]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Death" type="CollisionShape2D" parent="StaticBody2D/Death" unique_id=1665885613]
+position = Vector2(3191.3125, -91)
+shape = SubResource("RectangleShape2D_e3sih")
+
+[node name="Tree" type="Node" parent="." unique_id=957508679]
+
+[node name="tree" parent="Tree" unique_id=1391525660 instance=ExtResource("3_15mv3")]
+position = Vector2(877, -2779)
+
+[node name="tree2" parent="Tree" unique_id=542462654 instance=ExtResource("3_15mv3")]
+position = Vector2(1776, -2575)
+
+[node name="tree3" parent="Tree" unique_id=637380790 instance=ExtResource("3_15mv3")]
+position = Vector2(2585, -2316)
+
+[node name="tree5" parent="Tree" unique_id=2059312676 instance=ExtResource("3_15mv3")]
+position = Vector2(4594, -1510)
+
+[node name="tree6" parent="Tree" unique_id=1249464462 instance=ExtResource("3_15mv3")]
+position = Vector2(3822, -1857)
+
+[node name="House" type="Node" parent="." unique_id=1345360775]
+
+[node name="house2" parent="House" unique_id=1954024287 instance=ExtResource("6_2os1m")]
+position = Vector2(6208, -852)
 scale = Vector2(1, 1)
 
-[node name="house5" parent="House" unique_id=226044333 instance=ExtResource("6_2os1m")]
-position = Vector2(-4043, -2262)
+[node name="house4" parent="House" unique_id=1217257257 instance=ExtResource("6_2os1m")]
+position = Vector2(3120, -1863)
 scale = Vector2(1, 1)
 
-[node name="house4" parent="House" unique_id=581569659 instance=ExtResource("6_2os1m")]
-position = Vector2(-3073, -1921)
+[node name="house5" parent="House" unique_id=1901791013 instance=ExtResource("6_2os1m")]
+position = Vector2(5311, -1119)
 scale = Vector2(1, 1)
 
-[node name="house3" parent="House" unique_id=1505400630 instance=ExtResource("6_2os1m")]
-position = Vector2(1643, -1557)
-scale = Vector2(1, 1)
+[node name="Enemy" type="Node" parent="." unique_id=1054087828]
 
-[node name="house2" parent="House" unique_id=381925926 instance=ExtResource("6_2os1m")]
-position = Vector2(696, -1082)
-scale = Vector2(1, 1)
-
-[node name="house" parent="House" unique_id=822725947 instance=ExtResource("6_2os1m")]
-position = Vector2(-1366, -233)
-scale = Vector2(1, 1)
-
-[node name="Node" type="Node" parent="." unique_id=167082925]
-
-[node name="enemy" parent="Node" unique_id=1635071808 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(1018, -491)
+[node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
+position = Vector2(5703, -2511)
 Goal = NodePath("../../player")
 
-[node name="enemy2" parent="Node" unique_id=1707054168 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(-1590, -1787)
+[node name="enemy2" parent="Enemy" unique_id=1629312603 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
+position = Vector2(3019, -3049)
 Goal = NodePath("../../player")
 
-[node name="enemy3" parent="Node" unique_id=260847523 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(-687, -3254)
+[node name="enemy3" parent="Enemy" unique_id=1269175327 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
+position = Vector2(1101, -1017)
 Goal = NodePath("../../player")
 
-[node name="enemy4" parent="Node" unique_id=1602384937 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(1708, -3335)
-Goal = NodePath("../../player")
-
-[node name="enemy5" parent="Node" unique_id=686659329 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(-3411, -3901)
-Goal = NodePath("../../player")
-
-[node name="enemy6" parent="Node" unique_id=1714825732 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(-3565, -1191)
-Goal = NodePath("../../player")
+[connection signal="area_entered" from="StaticBody2D/Death" to="player" method="_on_death_area_entered"]
