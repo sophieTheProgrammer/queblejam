@@ -4,64 +4,86 @@
 [ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="2_ph3nu"]
 [ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="3_ph3nu"]
 [ext_resource type="PackedScene" uid="uid://b7xavbirsinof" path="res://scenes/death.tscn" id="4_4kmhl"]
+[ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="5_cq4me"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cq4me"]
+distance = 4.0000014
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6yjpi"]
+normal = Vector2(0.00028341007, -0.99999994)
+distance = -6878.9985
 
 [node name="tutorial" type="Node2D" unique_id=1205344489]
-position = Vector2(406, -1182)
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("1_8ho6b")]
-
-[node name="houses" type="Node" parent="." unique_id=1386070607]
-
-[node name="house3" parent="houses" unique_id=1050645927 instance=ExtResource("2_ph3nu")]
-position = Vector2(2934, -608)
-
-[node name="house2" parent="houses" unique_id=273667713 instance=ExtResource("2_ph3nu")]
-position = Vector2(1678, -559)
-
-[node name="house" parent="houses" unique_id=1621905291 instance=ExtResource("2_ph3nu")]
-position = Vector2(402, -533)
+position = Vector2(500, -2500)
 
 [node name="text" type="Node" parent="." unique_id=1531292137]
 
 [node name="trees" type="RichTextLabel" parent="text" unique_id=1504824620]
-offset_left = 3629.0
-offset_top = -2297.0
-offset_right = 5604.0
-offset_bottom = -1328.0
+offset_left = 3919.0
+offset_top = -3143.0
+offset_right = 5894.0
+offset_bottom = -2174.0
 text = "trees will fall after you stand on them for too long"
-metadata/_edit_use_anchors_ = true
 
 [node name="dontfall" type="RichTextLabel" parent="text" unique_id=72647953]
-offset_left = 1486.0
-offset_top = 1203.0
-offset_right = 3161.0
-offset_bottom = 1744.0
+offset_left = 4012.0
+offset_top = -940.0
+offset_right = 5687.0
+offset_bottom = -399.0
 text = "don't fall!"
 
 [node name="jump" type="RichTextLabel" parent="text" unique_id=1491643755]
-offset_left = 1122.0
-offset_top = -1623.0
-offset_right = 2797.0
-offset_bottom = -1082.0
+offset_left = 1196.0
+offset_top = -3093.0
+offset_right = 2871.0
+offset_bottom = -2552.0
 text = "space to jump"
-metadata/_edit_use_anchors_ = true
 
 [node name="wasd" type="RichTextLabel" parent="text" unique_id=1760828492]
-offset_left = -577.0
-offset_top = -2156.0
-offset_right = 1098.0
-offset_bottom = -1615.0
+offset_left = -503.0
+offset_top = -3626.0
+offset_right = 1172.0
+offset_bottom = -3085.0
 text = "wasd/arrow keys to move"
-metadata/_edit_use_anchors_ = true
+
+[node name="houses" type="Node" parent="." unique_id=1386070607]
+
+[node name="house3" parent="houses" unique_id=1050645927 instance=ExtResource("2_ph3nu")]
+position = Vector2(3008, -2078)
+
+[node name="house3" parent="houses/house3" unique_id=273667713 instance=ExtResource("2_ph3nu")]
+position = Vector2(3379, 214)
+
+[node name="house2" parent="houses" unique_id=895962117 instance=ExtResource("2_ph3nu")]
+position = Vector2(1752, -2029)
+
+[node name="house" parent="houses" unique_id=1621905291 instance=ExtResource("2_ph3nu")]
+position = Vector2(476, -2003)
 
 [node name="trees" type="Node" parent="." unique_id=94419687]
 
 [node name="tree3" parent="trees" unique_id=1391525660 instance=ExtResource("3_ph3nu")]
-position = Vector2(4098, -393)
+position = Vector2(4172, -1863)
 
 [node name="tree4" parent="trees" unique_id=1491794486 instance=ExtResource("3_ph3nu")]
-position = Vector2(5231, -417)
+position = Vector2(5305, -1887)
 
-[node name="Death" parent="." unique_id=1216396373 instance=ExtResource("4_4kmhl")]
-position = Vector2(3376, 1193)
+[node name="portal" parent="." unique_id=452576932 instance=ExtResource("5_cq4me")]
+position = Vector2(6484, -2527)
+DESTINATION = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1766777922]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1021755966]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_cq4me")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1771770985]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_6yjpi")
+
+[node name="Death" parent="StaticBody2D" unique_id=1216396373 instance=ExtResource("4_4kmhl")]
+position = Vector2(3273, 204)
 scale = Vector2(20, 1)

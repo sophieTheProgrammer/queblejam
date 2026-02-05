@@ -10,8 +10,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body is CharacterBody2D:
-		Global.load_scene(DESTINATION)
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	Global.load_scene(DESTINATION)

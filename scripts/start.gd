@@ -13,8 +13,6 @@ func _process(delta: float) -> void:
 func _on_start_button_up() -> void:
 	Global.load_scene(0)
 
-
-
 func _on_start_button_down() -> void:
 	SfxPlayer.play_click()
 
