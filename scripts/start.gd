@@ -1,6 +1,5 @@
 extends Node2D
 
-const START = preload("res://scenes/level_1.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -12,13 +11,15 @@ func _process(delta: float) -> void:
 
 
 func _on_start_button_up() -> void:
-	get_tree().change_scene_to_packed(START)
+	Global.load_scene(0)
 
 
 
 func _on_start_button_down() -> void:
 	SfxPlayer.play_click()
 
+func _on_quick_start_button_up() -> void:
+	Global.load_scene(1)
 
-func _on_options_button_down() -> void:
+func _on_quick_start_button_down() -> void:
 	SfxPlayer.play_click()

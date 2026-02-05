@@ -32,7 +32,7 @@ size_flags_vertical = 6
 theme = ExtResource("1_u80x2")
 text = "start"
 
-[node name="options" type="Button" parent="." unique_id=2144999731]
+[node name="quick_start" type="Button" parent="." unique_id=2144999731]
 offset_left = 234.0
 offset_top = 450.0
 offset_right = 865.8261
@@ -48,4 +48,5 @@ texture = ExtResource("2_bodal")
 
 [connection signal="button_down" from="start" to="." method="_on_start_button_down"]
 [connection signal="button_up" from="start" to="." method="_on_start_button_up"]
-[connection signal="button_down" from="options" to="." method="_on_options_button_down"]
+[connection signal="button_down" from="quick_start" to="." method="_on_quick_start_button_down"]
+[connection signal="button_up" from="quick_start" to="." method="_on_quick_start_button_up"]
