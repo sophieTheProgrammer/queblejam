@@ -25,6 +25,10 @@ SfxPlayer="*uid://obmsvc6rxqoy"
 
 window/stretch/aspect="expand"
 
+[gui]
+
+theme/custom="uid://b25fcicrd3wwt"
+
 [input]
 
 Jump={

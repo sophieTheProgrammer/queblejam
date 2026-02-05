@@ -21,5 +21,5 @@ position = Vector2(-353, 283)
 position = Vector2(-338, -10)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("5_jjnc2")]
-position = Vector2(-331, -236)
+position = Vector2(-83, -660)
 DESTINATION = 1

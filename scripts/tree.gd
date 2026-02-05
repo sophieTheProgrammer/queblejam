@@ -9,7 +9,7 @@ var tree_alive := false
 var POSITION
 const FALL_POSITION = 2000
 const TIME_TILL_ALIVE = 7
-const TIME_TILL_DEATH = 3
+const TIME_TILL_DEATH = 1
 var speed = 700
 const MAX_SPEED = 10000
 const ACCELERATION = 4000

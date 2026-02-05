@@ -17,7 +17,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-5024, -3478, -5053, 27
 [node name="leve-1" type="Node2D" unique_id=200994837]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1527148839]
-position = Vector2(-8, -141)
+position = Vector2(0, 22)
 navigation_polygon = SubResource("NavigationPolygon_feb5d")
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("2_pa8r4")]

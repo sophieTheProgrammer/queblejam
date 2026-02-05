@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://cwhtqjs1hgygk" path="res://art/house.png" id="2_qtlar"]
 
 [node name="house" type="AnimatableBody2D" unique_id=273667713]
-scale = Vector2(0.22, 0.22)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=610835347]
 scale = Vector2(0.73250484, 0.73250484)

@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bne4cbex41o6b"]
+
+[ext_resource type="PackedScene" uid="uid://fqnpaxidr784" path="res://scenes/player.tscn" id="1_8ho6b"]
+[ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="2_ph3nu"]
+[ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="3_ph3nu"]
+
+[node name="tutorial" type="Node2D" unique_id=1205344489]
+
+[node name="player" parent="." unique_id=575009404 instance=ExtResource("1_8ho6b")]
+
+[node name="houses" type="Node" parent="." unique_id=1386070607]
+
+[node name="house3" parent="houses" unique_id=1050645927 instance=ExtResource("2_ph3nu")]
+position = Vector2(2528, 574)
+
+[node name="house2" parent="houses" unique_id=273667713 instance=ExtResource("2_ph3nu")]
+position = Vector2(1272, 623)
+
+[node name="house" parent="houses" unique_id=1621905291 instance=ExtResource("2_ph3nu")]
+position = Vector2(-4, 649)
+
+[node name="text" type="Node" parent="." unique_id=1531292137]
+
+[node name="trees" type="RichTextLabel" parent="text" unique_id=1504824620]
+offset_left = 3223.0
+offset_top = -1115.0
+offset_right = 5198.0
+offset_bottom = -146.0
+text = "trees will fall after you stand on them for too long"
+
+[node name="dontfall" type="RichTextLabel" parent="text" unique_id=72647953]
+offset_left = 1486.0
+offset_top = 1203.0
+offset_right = 3161.0
+offset_bottom = 1744.0
+text = "don't fall!"
+
+[node name="jump" type="RichTextLabel" parent="text" unique_id=1491643755]
+offset_left = 716.0
+offset_top = -441.0
+offset_right = 2391.0
+offset_bottom = 100.0
+text = "space to jump"
+
+[node name="wasd" type="RichTextLabel" parent="text" unique_id=1760828492]
+offset_left = -983.0
+offset_top = -974.0
+offset_right = 692.0
+offset_bottom = -433.0
+text = "wasd/arrow keys to move"
+
+[node name="trees" type="Node" parent="." unique_id=94419687]
+
+[node name="tree2" parent="trees" unique_id=1391525660 instance=ExtResource("3_ph3nu")]
+position = Vector2(4827, 770)
+script = null
+
+[node name="tree" parent="trees" unique_id=1956730079 instance=ExtResource("3_ph3nu")]
+position = Vector2(3670, 791)
+script = null
