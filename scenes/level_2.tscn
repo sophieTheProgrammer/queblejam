@@ -46,7 +46,6 @@ position = Vector2(159, -3130)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("2_wo48x")]
 position = Vector2(4401, -1817)
-DESTINATION = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=850290715]
 
@@ -107,7 +106,7 @@ position = Vector2(2968, -4764)
 position = Vector2(4260, -4331)
 
 [node name="house6" parent="House" unique_id=156836480 instance=ExtResource("4_ne2mo")]
-position = Vector2(1188, -1327)
+position = Vector2(3392, -2616)
 
 [node name="Enemy" type="Node" parent="." unique_id=2057262548]
 
