@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://ciuakvp37r8bx"]
 
 [ext_resource type="Script" uid="uid://bdj0i58yreqs3" path="res://scripts/enemy.gd" id="1_7p1mj"]
+[ext_resource type="PackedScene" uid="uid://b7xavbirsinof" path="res://scenes/death.tscn" id="2_md0e3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7p1mj"]
 size = Vector2(25, 24)
 
-[node name="enemy" type="CharacterBody2D" unique_id=1707054168]
+[node name="enemy" type="CharacterBody2D" unique_id=1707054168 node_paths=PackedStringArray("Goal")]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_7p1mj")
+Goal = NodePath(".")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1768919789]
 offset_left = -63.0
@@ -26,13 +28,8 @@ autostart = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1831516010]
 shape = SubResource("RectangleShape2D_7p1mj")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=635515735]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1743671235]
-scale = Vector2(3.18, 3.18)
-shape = SubResource("RectangleShape2D_7p1mj")
+[node name="Death" parent="." unique_id=1216396373 instance=ExtResource("2_md0e3")]
+position = Vector2(-5.9604645e-08, 0)
+scale = Vector2(0.17, 0.19)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

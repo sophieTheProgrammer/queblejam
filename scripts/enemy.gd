@@ -17,7 +17,3 @@ func _on_timer_timeout() -> void:
 	if navigation.target_position != Goal.global_position && !Global.debug:
 		navigation.target_position = Goal.global_position
 		timer.start()
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if !Global.debug:
-		get_tree().reload_current_scene()
