@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bne4cbex41o6b"]
+[gd_scene format=3 uid="uid://cpwhdgoa80efg"]
 
 [ext_resource type="PackedScene" uid="uid://fqnpaxidr784" path="res://scenes/player.tscn" id="1_8ho6b"]
 [ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="2_ph3nu"]
@@ -12,57 +12,69 @@ size = Vector2(327.16248, 262.1739)
 vertices = PackedVector2Array(1557.8516, 2648.9766, -844.4922, 2707.8281, -2965.6406, -2209.961, 4180.7266, -3241.4219, 7813.6406, 92.3125, 5394.672, 3403.9531)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(0, 4, 5)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(1557, 2659, 5399, 3415, 7827, 91, 4184, -3252, -2980, -2218, -851, 2718)])
+[ext_resource type="PackedScene" uid="uid://b7xavbirsinof" path="res://scenes/death.tscn" id="4_4kmhl"]
+[ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="5_cq4me"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cq4me"]
+distance = 4.0000014
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6yjpi"]
+normal = Vector2(0.00028341007, -0.99999994)
+distance = -6878.9985
 
 [node name="tutorial" type="Node2D" unique_id=1205344489]
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("1_8ho6b")]
-
-[node name="houses" type="Node" parent="." unique_id=1386070607]
-
-[node name="house3" parent="houses" unique_id=1050645927 instance=ExtResource("2_ph3nu")]
-position = Vector2(2528, 574)
-
-[node name="house2" parent="houses" unique_id=273667713 instance=ExtResource("2_ph3nu")]
-position = Vector2(1272, 623)
-
-[node name="house" parent="houses" unique_id=1621905291 instance=ExtResource("2_ph3nu")]
-position = Vector2(-4, 649)
+position = Vector2(500, -2500)
 
 [node name="text" type="Node" parent="." unique_id=1531292137]
 
 [node name="trees" type="RichTextLabel" parent="text" unique_id=1504824620]
-offset_left = 3223.0
-offset_top = -1115.0
-offset_right = 5198.0
-offset_bottom = -146.0
+offset_left = 3919.0
+offset_top = -3143.0
+offset_right = 5894.0
+offset_bottom = -2174.0
 text = "trees will fall after you stand on them for too long"
 
 [node name="dontfall" type="RichTextLabel" parent="text" unique_id=72647953]
-offset_left = 1486.0
-offset_top = 1203.0
-offset_right = 3161.0
-offset_bottom = 1744.0
+offset_left = 4012.0
+offset_top = -940.0
+offset_right = 5687.0
+offset_bottom = -399.0
 text = "don't fall!"
 
 [node name="jump" type="RichTextLabel" parent="text" unique_id=1491643755]
-offset_left = 716.0
-offset_top = -441.0
-offset_right = 2391.0
-offset_bottom = 100.0
+offset_left = 1196.0
+offset_top = -3093.0
+offset_right = 2871.0
+offset_bottom = -2552.0
 text = "space to jump"
 
 [node name="wasd" type="RichTextLabel" parent="text" unique_id=1760828492]
-offset_left = -983.0
-offset_top = -974.0
-offset_right = 692.0
-offset_bottom = -433.0
+offset_left = -503.0
+offset_top = -3626.0
+offset_right = 1172.0
+offset_bottom = -3085.0
 text = "wasd/arrow keys to move"
+
+[node name="houses" type="Node" parent="." unique_id=1386070607]
+
+[node name="house3" parent="houses" unique_id=1050645927 instance=ExtResource("2_ph3nu")]
+position = Vector2(3008, -2078)
+
+[node name="house3" parent="houses/house3" unique_id=273667713 instance=ExtResource("2_ph3nu")]
+position = Vector2(3379, 214)
+
+[node name="house2" parent="houses" unique_id=895962117 instance=ExtResource("2_ph3nu")]
+position = Vector2(1752, -2029)
+
+[node name="house" parent="houses" unique_id=1621905291 instance=ExtResource("2_ph3nu")]
+position = Vector2(476, -2003)
 
 [node name="trees" type="Node" parent="." unique_id=94419687]
 
-[node name="tree2" parent="trees" unique_id=1391525660 instance=ExtResource("3_ph3nu")]
-position = Vector2(4827, 770)
-script = null
+[node name="tree3" parent="trees" unique_id=1391525660 instance=ExtResource("3_ph3nu")]
+position = Vector2(4172, -1863)
 
 [node name="tree" parent="trees" unique_id=1956730079 instance=ExtResource("3_ph3nu")]
 position = Vector2(3670, 791)
