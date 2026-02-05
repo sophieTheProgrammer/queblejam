@@ -11,7 +11,9 @@ var last_floor = false  # Last frame's on-floor state
 var jumping = false
 const ACCELERATION = 4000
 const DECCELERATION = 4000
+
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var jumpsfx: AudioStreamPlayer2D = $jumpsfx
 
 func _ready() -> void:
 	pass
@@ -67,7 +69,11 @@ func handle_jump(delta):
 		sprite.play('idle')
 	
 	last_floor = is_on_floor()
-
+	
+	if Input.is_action_pressed ("Jump") and last_floor:
+		jumpsfx.play()
+		print('YOU HAVE REACHED 911')
+	
 func flip_sprite(direction):
 	if direction != 0:
 		if direction == 1:
@@ -77,7 +83,6 @@ func flip_sprite(direction):
 
 func _on_coyote_timer_timeout() -> void:
 	coyote = false
-
 
 func _on_death_area_entered(_area: Area2D) -> void:
 	get_tree().reload_current_scene()
