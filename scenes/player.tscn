@@ -69,6 +69,7 @@ size = Vector2(102, 193.5)
 size = Vector2(152.18666, 87.93544)
 
 [node name="player" type="CharacterBody2D" unique_id=575009404]
+collision_layer = 4
 script = ExtResource("1_3vyb7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1416682726]

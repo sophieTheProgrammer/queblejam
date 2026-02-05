@@ -19,6 +19,7 @@ color = Color(0.782125, 0, 0.09272816, 1)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=506269665]
 debug_enabled = true
+debug_use_custom = true
 
 [node name="Timer" type="Timer" parent="." unique_id=1739188031]
 autostart = true
