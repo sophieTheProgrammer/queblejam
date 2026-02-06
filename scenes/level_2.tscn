@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="2_wo48x"]
 [ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="3_y0kc7"]
 [ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="4_ne2mo"]
+[ext_resource type="PackedScene" uid="uid://b7xavbirsinof" path="res://scenes/death.tscn" id="4_y0kc7"]
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="5_6cvei"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4nkto"]
@@ -23,9 +24,6 @@ distance = -163.00014
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_15mv3"]
 normal = Vector2(0.00028341007, -0.99999994)
 distance = -4722.7686
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nkto"]
-size = Vector2(5124.75, 394)
 
 [node name="level_2" type="Node2D" unique_id=985326687]
 
@@ -64,13 +62,9 @@ shape = SubResource("WorldBoundaryShape2D_pa8r4")
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_15mv3")
 
-[node name="Death" type="Area2D" parent="StaticBody2D" unique_id=1092303230]
-collision_layer = 4
-collision_mask = 4
-
-[node name="Death" type="CollisionShape2D" parent="StaticBody2D/Death" unique_id=1203118574]
-position = Vector2(2324, -91)
-shape = SubResource("RectangleShape2D_4nkto")
+[node name="Death" parent="StaticBody2D" unique_id=1216396373 instance=ExtResource("4_y0kc7")]
+position = Vector2(3221.0002, -94)
+scale = Vector2(20, 1)
 
 [node name="Tree" type="Node" parent="." unique_id=1027461552]
 
@@ -117,5 +111,3 @@ position = Vector2(3392, -2616)
 [node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal") instance=ExtResource("5_6cvei")]
 position = Vector2(2306, -5321)
 Goal = NodePath("../../player")
-
-[connection signal="area_entered" from="StaticBody2D/Death" to="player" method="_on_death_area_entered"]

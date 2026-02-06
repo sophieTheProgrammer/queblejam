@@ -1,6 +1,5 @@
 extends CharacterBody2D
 const movement_speed= 30000.0
-const RESET = preload("res://scenes/level_1.tscn")
 @export var Goal: Node = null
 @onready var navigation: NavigationAgent2D = $NavigationAgent2D
 @onready var timer: Timer = $Timer

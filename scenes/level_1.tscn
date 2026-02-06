@@ -83,13 +83,13 @@ position = Vector2(-1462.9995, -2969)
 [node name="Enemy" type="Node" parent="." unique_id=1054087828]
 
 [node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(5703, -2511)
+position = Vector2(1613, -3568)
 Goal = NodePath("../../player")
 
-[node name="enemy2" parent="Enemy" unique_id=1629312603 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(3019, -3049)
+[node name="enemy2" parent="Enemy" unique_id=460225757 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
+position = Vector2(1241, -679)
 Goal = NodePath("../../player")
 
-[node name="enemy3" parent="Enemy" unique_id=1269175327 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(1101, -1017)
+[node name="enemy3" parent="Enemy" unique_id=1609423018 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
+position = Vector2(10652, -3968)
 Goal = NodePath("../../player")
