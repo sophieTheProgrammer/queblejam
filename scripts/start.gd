@@ -14,10 +14,10 @@ func _on_start_button_up() -> void:
 	Global.load_scene(0)
 
 func _on_start_button_down() -> void:
-	SfxPlayer.play_click()
+	SfxPlayer.play_sound(SfxPlayer.CLICK, 10)
 
 func _on_quick_start_button_up() -> void:
 	Global.load_scene(1)
 
 func _on_quick_start_button_down() -> void:
-	SfxPlayer.play_click()
+	SfxPlayer.play_sound(SfxPlayer.CLICK, 10)

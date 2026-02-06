@@ -13,7 +13,6 @@ const ACCELERATION = 4000
 const DECCELERATION = 4000
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var jumpsfx: AudioStreamPlayer2D = $jumpsfx
 
 func _ready() -> void:
 	pass
@@ -54,12 +53,15 @@ func handle_jump(delta):
 		jumping = true
 		coyote = false
 	
+	print(velocity.y)
 	# # adding fast fall on the way down
 	if not is_on_floor() and jumping:
 		if not Input.is_action_pressed("Jump"):
 			velocity.y += fast_fall
 		if velocity.y > 0:
 			velocity.y += fast_fall
+	if velocity.y > 3000:
+		velocity.y = 3000
 	
 	# jump animation here
 	if jumping:
@@ -70,7 +72,7 @@ func handle_jump(delta):
 	last_floor = is_on_floor()
 	
 	if Input.is_action_pressed ("Jump") and last_floor:
-		jumpsfx.play()
+		SfxPlayer.play_sound(SfxPlayer.JUMP, 10)
 	
 func flip_sprite(direction):
 	if direction != 0:

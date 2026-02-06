@@ -113,21 +113,21 @@ text = "use WASD/ARROW keys to move"
 
 [node name="trees fall" type="RichTextLabel" parent="text" unique_id=60911205]
 z_index = -3
-offset_left = 3195.0
-offset_top = -3152.0
-offset_right = 5383.0
-offset_bottom = -2396.0
+offset_left = 2276.0
+offset_top = -3131.0
+offset_right = 4464.0
+offset_bottom = -2375.0
 theme_override_colors/default_color = Color(0.8509804, 0.08627451, 0.08235294, 1)
 theme_override_fonts/normal_font = ExtResource("5_gbqnl")
 theme_override_font_sizes/normal_font_size = 150
-text = "trees will fall if you stand on them for too long!"
+text = "don't stand on trees for too long"
 
 [node name="trees fall2" type="RichTextLabel" parent="text" unique_id=1317165122]
 z_index = -3
-offset_left = 3291.0
-offset_top = -1586.0
-offset_right = 5479.0
-offset_bottom = -830.0
+offset_left = 3989.0
+offset_top = -1450.0
+offset_right = 6177.0
+offset_bottom = -694.0
 theme_override_colors/default_color = Color(0.8509804, 0.08627451, 0.08235294, 1)
 theme_override_fonts/normal_font = ExtResource("5_gbqnl")
 theme_override_font_sizes/normal_font_size = 150
@@ -155,11 +155,11 @@ rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_6yjpi")
 
 [node name="Death" parent="StaticBody2D" unique_id=1216396373 instance=ExtResource("4_4kmhl")]
-position = Vector2(3273, 204)
-scale = Vector2(20, 1)
+position = Vector2(4862, -65)
+scale = Vector2(31.02, 1)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=90692458]
-position = Vector2(-633, 46)
+position = Vector2(-985, -399)
 navigation_polygon = SubResource("NavigationPolygon_gbqnl")
 
 [node name="enemies" type="Node" parent="." unique_id=1144528467]
