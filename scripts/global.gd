@@ -4,8 +4,9 @@ extends Node
 const LEVEL_0 = preload("res://scenes/tutorial.tscn")
 const LEVEL_1 = preload("res://scenes/level_1.tscn")
 const LEVEL_2 = preload("res://scenes/level_2.tscn")
+const LEVEL_3 = preload("res://scenes/level_3.tscn")
 const START = preload("res://scenes/start.tscn")
-const LEVELS = [LEVEL_0, LEVEL_1, LEVEL_2]
+const LEVELS = [LEVEL_0, LEVEL_1, LEVEL_2, LEVEL_3]
 @export var Destination := 0
 func load_scene(scene:int):
 	#get_tree().change_scene_to_packed(LEVELS[scene])

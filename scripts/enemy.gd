@@ -22,6 +22,7 @@ func _on_timer_timeout() -> void:
 	if navigation.target_position != Goal.global_position && !Global.debug:
 		navigation.target_position = Goal.global_position
 		timer.start()
+
 func activate(_body):
 	print("wow")
 	activated = true

@@ -8,6 +8,11 @@
 [ext_resource type="FontFile" uid="uid://bt6syfcgpsp5i" path="res://random assets/Valorax-lg25V.otf" id="5_gbqnl"]
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="67_enemy"]
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_gbqnl"]
+vertices = PackedVector2Array(11417.32, -4337.2813, 10425.352, 1852.7813, 205.79688, 2827.7813, -4143.2734, 762.4922, -2753.2734, -4694.789)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-2761, -4705, -4155, 768, 204, 2838, 10434, 1862, 11429, -4347)])
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ckvwl"]
 size = Vector2(234.75, 1953.375)
 
@@ -18,12 +23,11 @@ distance = 4.0000014
 normal = Vector2(0.00028341007, -0.99999994)
 distance = -10178.035
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_gbqnl"]
-vertices = PackedVector2Array(11417.32, -4337.2813, 10425.352, 1852.7813, 205.79688, 2827.7813, -4143.2734, 762.4922, -2753.2734, -4694.789)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-2761, -4705, -4155, 768, 204, 2838, 10434, 1862, 11429, -4347)])
-
 [node name="tutorial" type="Node2D" unique_id=1205344489]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=90692458]
+position = Vector2(-985, -399)
+navigation_polygon = SubResource("NavigationPolygon_gbqnl")
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("1_8ho6b")]
 position = Vector2(500, -2500)
@@ -157,9 +161,5 @@ shape = SubResource("WorldBoundaryShape2D_6yjpi")
 [node name="Death" parent="StaticBody2D" unique_id=1216396373 instance=ExtResource("4_4kmhl")]
 position = Vector2(4862, -65)
 scale = Vector2(31.02, 1)
-
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=90692458]
-position = Vector2(-985, -399)
-navigation_polygon = SubResource("NavigationPolygon_gbqnl")
 
 [node name="enemies" type="Node" parent="." unique_id=1144528467]
