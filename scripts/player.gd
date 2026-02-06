@@ -44,7 +44,7 @@ func handle_jump(delta):
 	if last_floor and not is_on_floor() and not jumping:
 		coyote = true
 		$CoyoteTimer.start()
-		print("Starting Coyote Timer")
+		#print("Starting Coyote Timer")
 		
 	# TODO: variable jump height makes character go too high
 	# Handle jump.
@@ -53,7 +53,7 @@ func handle_jump(delta):
 		jumping = true
 		coyote = false
 	
-	print(velocity.y)
+	#print(velocity.y)
 	# # adding fast fall on the way down
 	if not is_on_floor() and jumping:
 		if not Input.is_action_pressed("Jump"):
@@ -72,7 +72,7 @@ func handle_jump(delta):
 	last_floor = is_on_floor()
 	
 	if Input.is_action_pressed ("Jump") and last_floor:
-		SfxPlayer.play_sound(SfxPlayer.JUMP, 10)
+		SfxPlayer.play_sound(SfxPlayer.JUMP, 7)
 	
 func flip_sprite(direction):
 	if direction != 0:

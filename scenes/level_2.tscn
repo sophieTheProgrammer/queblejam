@@ -32,10 +32,10 @@ position = Vector2(4542, -11)
 navigation_polygon = SubResource("NavigationPolygon_4nkto")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=326295590]
-offset_left = 1608.0
-offset_top = -4022.0
-offset_right = 2562.0
-offset_bottom = -3612.0
+offset_left = 1489.0
+offset_top = -4062.0
+offset_right = 2443.0
+offset_bottom = -3652.0
 theme = SubResource("Theme_4nkto")
 theme_override_colors/default_color = Color(1, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_wo48x")
@@ -43,7 +43,7 @@ theme_override_font_sizes/normal_font_size = 100
 text = "Wait for it..."
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("1_b4j7a")]
-position = Vector2(159, -3130)
+position = Vector2(159, -3126)
 collision_layer = 1
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("2_wo48x")]
