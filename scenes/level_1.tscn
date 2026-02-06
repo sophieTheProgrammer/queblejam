@@ -30,7 +30,6 @@ position = Vector2(6355, -1577)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("4_e3sih")]
 position = Vector2(-1949, -3853)
-DESTINATION = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1034328894]
 
