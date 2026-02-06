@@ -91,5 +91,5 @@ position = Vector2(1241, -679)
 Goal = NodePath("../../player")
 
 [node name="enemy3" parent="Enemy" unique_id=1609423018 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(10652, -3968)
+position = Vector2(5706, -2378)
 Goal = NodePath("../../player")
