@@ -49,7 +49,7 @@ text = "Think fast"
 position = Vector2(159, -3126)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("3_ha73p")]
-position = Vector2(7593, -2846)
+position = Vector2(7701, -2555)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=850290715]
 
@@ -136,7 +136,7 @@ shape = SubResource("RectangleShape2D_hhfj6")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy4" parent="Enemy" unique_id=1363310727 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("7_q2dsb")]
-position = Vector2(8477, -2774)
+position = Vector2(8818, -2841)
 Goal = NodePath("../../player")
 activation = NodePath("Area2D")
 activated = false
@@ -146,6 +146,6 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy4/Area2D" unique_id=268215426]
-position = Vector2(-1495, 787)
+position = Vector2(-1853, 871)
 shape = SubResource("RectangleShape2D_hhfj6")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
