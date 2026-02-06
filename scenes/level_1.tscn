@@ -19,6 +19,9 @@ distance = -2277.0002
 normal = Vector2(0.00028341007, -0.99999994)
 distance = -6584.985
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcfvj"]
+size = Vector2(1586.8438, 1437.4219)
+
 [node name="level_1" type="Node2D" unique_id=532896419]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1327585009]
@@ -82,14 +85,47 @@ position = Vector2(-1462.9995, -2969)
 
 [node name="Enemy" type="Node" parent="." unique_id=1054087828]
 
-[node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(1613, -3568)
+[node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
+position = Vector2(1864, -3495)
 Goal = NodePath("../../player")
+activation = NodePath("Area2D")
+activated = false
 
-[node name="enemy2" parent="Enemy" unique_id=460225757 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(1241, -679)
-Goal = NodePath("../../player")
+[node name="Area2D" type="Area2D" parent="Enemy/enemy" unique_id=1467214399]
+collision_layer = 0
+collision_mask = 4
 
-[node name="enemy3" parent="Enemy" unique_id=1609423018 node_paths=PackedStringArray("Goal") instance=ExtResource("1_fcfvj")]
-position = Vector2(5706, -2378)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy/Area2D" unique_id=1212943136]
+position = Vector2(44.421875, 788.28906)
+shape = SubResource("RectangleShape2D_fcfvj")
+debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
+
+[node name="enemy2" parent="Enemy" unique_id=460225757 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
+position = Vector2(230, -1979)
 Goal = NodePath("../../player")
+activation = NodePath("Area2D")
+activated = false
+
+[node name="Area2D" type="Area2D" parent="Enemy/enemy2" unique_id=817062216]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy2/Area2D" unique_id=2126396441]
+position = Vector2(424, -880)
+shape = SubResource("RectangleShape2D_fcfvj")
+debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
+
+[node name="enemy3" parent="Enemy" unique_id=1609423018 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
+position = Vector2(5440, -2287)
+Goal = NodePath("../../player")
+activation = NodePath("Area2D")
+activated = false
+
+[node name="Area2D" type="Area2D" parent="Enemy/enemy3" unique_id=1615211646]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy3/Area2D" unique_id=1122072793]
+position = Vector2(-828, 667)
+shape = SubResource("RectangleShape2D_fcfvj")
+debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)

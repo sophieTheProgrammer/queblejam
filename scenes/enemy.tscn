@@ -22,6 +22,7 @@ color = Color(0.782125, 0, 0.09272816, 1)
 debug_use_custom = true
 
 [node name="Timer" type="Timer" parent="." unique_id=1739188031]
+wait_time = 0.5
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1831516010]

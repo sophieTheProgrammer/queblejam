@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="7_q2dsb"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4nkto"]
-vertices = PackedVector2Array(-4516.383, 5, -4704.461, -4830.289, -2751.3594, -4230.258, 4270.328, 11.9921875, 4369.711, -2949.6875)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-4715, -4844, -4526, 15, 4280, 22, 4380, -2958, -2749, -4240)])
+vertices = PackedVector2Array(-4516.3516, 5, -4674.383, -4360.211, -2901.7578, -3438.1563, 4270.328, 11.9921875, 4369.6797, -2948.6563)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 0, 2, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-4685, -4377, -4526, 15, 4280, 22, 4380, -2958, -2899, -3448)])
 
 [sub_resource type="Theme" id="Theme_4nkto"]
 
@@ -19,14 +19,20 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-4715, -4844, -4526, 15
 distance = -40.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pa8r4"]
-distance = -154.00014
+distance = -108.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_15mv3"]
 normal = Vector2(0.00028341007, -0.99999994)
 distance = -8623.31
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wae8j"]
+size = Vector2(591.375, 849.34375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ha73p"]
+size = Vector2(758.375, 712.6875)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hhfj6"]
-size = Vector2(234.75, 1953.375)
+size = Vector2(868.375, 771.6875)
 
 [node name="level_3" type="Node2D" unique_id=985326687]
 
@@ -116,8 +122,8 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy2/Area2D" unique_id=1888808027]
-position = Vector2(-772, 161)
-shape = SubResource("RectangleShape2D_hhfj6")
+position = Vector2(-507, 271)
+shape = SubResource("RectangleShape2D_wae8j")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy3" parent="Enemy" unique_id=1864481966 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("7_q2dsb")]
@@ -131,8 +137,8 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy3/Area2D" unique_id=112239815]
-position = Vector2(-1810, 184)
-shape = SubResource("RectangleShape2D_hhfj6")
+position = Vector2(-2065, 289)
+shape = SubResource("RectangleShape2D_ha73p")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy4" parent="Enemy" unique_id=1363310727 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("7_q2dsb")]
@@ -146,6 +152,6 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy4/Area2D" unique_id=268215426]
-position = Vector2(-1853, 871)
+position = Vector2(-1822, 843)
 shape = SubResource("RectangleShape2D_hhfj6")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
