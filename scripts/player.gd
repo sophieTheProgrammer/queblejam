@@ -18,7 +18,6 @@ const DECCELERATION = 4000
 func _ready() -> void:
 	pass
 func _physics_process(delta: float) -> void:
-
 	handle_jump(delta)
 	
 	# Get the input direction and handle the movement/deceleration.
@@ -72,7 +71,6 @@ func handle_jump(delta):
 	
 	if Input.is_action_pressed ("Jump") and last_floor:
 		jumpsfx.play()
-		print('YOU HAVE REACHED 911')
 	
 func flip_sprite(direction):
 	if direction != 0:
@@ -83,6 +81,6 @@ func flip_sprite(direction):
 
 func _on_coyote_timer_timeout() -> void:
 	coyote = false
-
-func _on_death_area_entered(_area: Area2D) -> void:
-	get_tree().reload_current_scene()
+#
+#func _on_death_area_entered(_area: Area2D) -> void:
+	#get_tree().reload_current_scene()

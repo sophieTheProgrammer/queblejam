@@ -86,7 +86,6 @@ position = Vector2(7537, -1849)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("5_cq4me")]
 position = Vector2(9375, -2832)
-DESTINATION = 2
 
 [node name="text" type="Node" parent="." unique_id=1531292137]
 

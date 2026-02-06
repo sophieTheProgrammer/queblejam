@@ -69,7 +69,6 @@ color = Color(0.5709799, 0.5709799, 0.5709799, 1)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("3_xyhiu")]
 position = Vector2(468, -290)
-DESTINATION = 2
 
 [node name="game_manager" type="Node2D" parent="." unique_id=474106210]
 script = ExtResource("4_kbqg4")
@@ -78,27 +77,21 @@ script = ExtResource("4_kbqg4")
 
 [node name="house6" parent="House" unique_id=273667713 instance=ExtResource("5_1jf33")]
 position = Vector2(-1322, -3664)
-scale = Vector2(1, 1)
 
 [node name="house5" parent="House" unique_id=226044333 instance=ExtResource("5_1jf33")]
 position = Vector2(-4043, -2262)
-scale = Vector2(1, 1)
 
 [node name="house4" parent="House" unique_id=581569659 instance=ExtResource("5_1jf33")]
 position = Vector2(-3073, -1921)
-scale = Vector2(1, 1)
 
 [node name="house3" parent="House" unique_id=1505400630 instance=ExtResource("5_1jf33")]
 position = Vector2(1643, -1557)
-scale = Vector2(1, 1)
 
 [node name="house2" parent="House" unique_id=381925926 instance=ExtResource("5_1jf33")]
 position = Vector2(696, -1082)
-scale = Vector2(1, 1)
 
 [node name="house" parent="House" unique_id=822725947 instance=ExtResource("5_1jf33")]
 position = Vector2(-1366, -233)
-scale = Vector2(1, 1)
 
 [node name="Enemy" type="Node" parent="." unique_id=167082925]
 
