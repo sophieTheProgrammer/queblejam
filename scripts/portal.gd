@@ -9,4 +9,6 @@ func _process(_delta: float) -> void:
 	pass
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
+	SfxPlayer.play_sound(SfxPlayer.WHOOSH, 20)
 	Global.load_scene(Global.Destination)
+	
