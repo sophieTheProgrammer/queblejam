@@ -132,10 +132,10 @@ text = "don't stand on trees for too long"
 
 [node name="trees fall2" type="RichTextLabel" parent="text" unique_id=1317165122]
 z_index = -3
-offset_left = 3989.0
-offset_top = -1450.0
-offset_right = 6177.0
-offset_bottom = -694.0
+offset_left = 3999.0
+offset_top = -1009.0
+offset_right = 6187.0
+offset_bottom = -253.0
 theme_override_colors/default_color = Color(0.8509804, 0.08627451, 0.08235294, 1)
 theme_override_fonts/normal_font = ExtResource("5_gbqnl")
 theme_override_font_sizes/normal_font_size = 150
