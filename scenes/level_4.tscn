@@ -93,7 +93,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(439, -1943)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("3_yk4f3")]
-position = Vector2(7620, -360)
+position = Vector2(7215, -969)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=850290715]
 
@@ -129,7 +129,7 @@ position = Vector2(5397, -2195)
 position = Vector2(288, -1369)
 
 [node name="house2" parent="House" unique_id=473170789 instance=ExtResource("6_7ewpb")]
-position = Vector2(1665, -2772)
+position = Vector2(-593, -13227)
 
 [node name="house3" parent="House" unique_id=2011144360 instance=ExtResource("6_7ewpb")]
 position = Vector2(2389, -1472)
