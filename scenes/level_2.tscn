@@ -37,8 +37,16 @@ size = Vector2(1893.6875, 1726.8438)
 [node name="TileMap" parent="." unique_id=294153611 instance=ExtResource("1_ne2mo")]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1076676205]
-position = Vector2(4542, -11)
+position = Vector2(4370, 19)
 navigation_polygon = SubResource("NavigationPolygon_4nkto")
+
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1595353920]
+vertices = PackedVector2Array(-2363, -1017, -2363, -595, -1733, -693, -1286, -769, -825, -898, -571, -880, -384, -932, -415, -647, 233, -678, 368, -828, 362, -1149, 362, -1442, -146, -1467, -391, -1274, -1027, -1311, -1082, -1213, -1831, -1191, -1809, -1094)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1161741342]
+vertices = PackedVector2Array(-4462, -2859, -4499, -2314, -3860, -2264, -3728, -2496, -3725, -2761, -3295, -2741, -3046, -2886, -2686, -2936, -2329, -3104, -2026, -3061, -1717, -3222, -1737, -3562, -1209, -3559, -1108, -3633, -1135, -3791, -1044, -3784, -1021, -4500, -1014, -5203, -1461, -5230, -1784, -4985, -1824, -3624, -2356, -3553, -2396, -3413, -3029, -3400, -3062, -3263, -3671, -3238, -3729, -3079, -4203, -3040)
+affect_navigation_mesh = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=326295590]
 offset_left = 1489.0
@@ -97,7 +105,7 @@ position = Vector2(2967, -910)
 [node name="House" type="Node" parent="." unique_id=1418792038]
 
 [node name="house" parent="House" unique_id=273667713 instance=ExtResource("4_ne2mo")]
-position = Vector2(305, -2589)
+position = Vector2(272, -2616)
 
 [node name="house2" parent="House" unique_id=473170789 instance=ExtResource("4_ne2mo")]
 position = Vector2(4351, -1030)
