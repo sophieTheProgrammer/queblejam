@@ -16,9 +16,10 @@ script = ExtResource("1_vplca")
 one_shot = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1303620596]
-position = Vector2(2.9999924, 9.000015)
+position = Vector2(-2.3841858e-07, 232.00003)
 scale = Vector2(0.3074128, 0.3074128)
 texture = ExtResource("2_vplca")
+offset = Vector2(0, -827.98)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1530915941]
 position = Vector2(8, -71)

@@ -171,6 +171,6 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy3/Area2D3" unique_id=1122072793]
-position = Vector2(-645, 1371)
+position = Vector2(-703, 1061)
 shape = SubResource("RectangleShape2D_fcfvj")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
