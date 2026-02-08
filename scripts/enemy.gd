@@ -10,7 +10,7 @@ func _ready() -> void:
 	if activation:
 		activation.body_entered.connect(activate)
 	navigation.target_position = Goal.global_position
-
+	
 func _physics_process (delta: float) -> void:
 	navigate(delta)
 
