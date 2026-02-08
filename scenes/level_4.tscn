@@ -53,7 +53,7 @@ text = "A leap of faith"
 metadata/_edit_use_anchors_ = true
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("2_qsmat")]
-position = Vector2(4839, -2392)
+position = Vector2(439, -1943)
 
 [node name="portal" parent="." unique_id=452576932 instance=ExtResource("3_yk4f3")]
 position = Vector2(7620, -360)

@@ -24,7 +24,7 @@ func navigate(delta: float):
 		var new_velocity = global_position.direction_to(next_path_pos)*movement_speed
 		position+=new_velocity*delta
 		$animated_sprite.rotation = new_velocity.angle()
-
+		$animated_sprite.rotation -= PI/2
 
 func _on_timer_timeout() -> void:
 	navigation.target_position = Goal.global_position

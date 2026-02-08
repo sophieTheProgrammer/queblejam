@@ -9,9 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="6_2os1m"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4nkto"]
-vertices = PackedVector2Array(-1460.2109, -3543.2266, 2097.9063, -2523.4766, 2069.1094, -1.9921875, -7134.117, 3.9921875, -6765.922, -4429.3438)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-6775, -4441, -7145, 14, 2079, 8, 2108, -2531, -1458, -3553)])
+vertices = PackedVector2Array(-6679.9766, -4196.25, -1515.9297, -3296.5625, -5338.742, -3641.3281, 1883.6563, -2348.25, -1503.6719, -2600.1563, -6182.8594, -3632.75, 1477.4688, -1537.6484, 1267.9063, -1377.3203, 1275.3594, -1771.7031, -6670.2734, -3297.1563, -6869.5, -248.75, -6651.422, -2323.961, -5370.711, -2355.6875, -2355.4063, -2627.4219, -2827.5313, -2270.1406, -1527.1094, -1333.1719, 381.0078, -1812.3516, -56.421875, -431.21094, 1008.4219, -463.7578, 1009.8672, -253.88281, -2842.8672, -1298.2422, 1860.3594, -1533.0469, -49.8125, -1407.25)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(1, 3, 4), PackedInt32Array(0, 2, 5), PackedInt32Array(6, 7, 8, 3), PackedInt32Array(0, 5, 9), PackedInt32Array(10, 0, 9), PackedInt32Array(10, 9, 11), PackedInt32Array(12, 2, 1, 13, 14), PackedInt32Array(15, 4, 3, 16), PackedInt32Array(1, 4, 13), PackedInt32Array(17, 18, 19), PackedInt32Array(17, 19, 10), PackedInt32Array(17, 10, 11, 20), PackedInt32Array(3, 21, 6), PackedInt32Array(12, 14, 20, 11), PackedInt32Array(3, 8, 16), PackedInt32Array(15, 16, 22), PackedInt32Array(15, 22, 17), PackedInt32Array(20, 15, 17)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-6928, -4506, -7145, 14, 2079, 8, 2152, -2546, -1458, -3553)])
+agent_radius = 262.58
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fcfvj"]
 distance = -2277.0002
@@ -30,6 +31,22 @@ size = Vector2(1586.8438, 1437.4219)
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1327585009]
 position = Vector2(4542, -11)
 navigation_polygon = SubResource("NavigationPolygon_4nkto")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=808858580]
+vertices = PackedVector2Array(1565, -1274, 1267, -1046, 1271, -466, 2049, -490, 2065, -1268)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1947798990]
+vertices = PackedVector2Array(1008, -1521, 480, -1545, 212, -1293, 208, -702, 993, -726)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=2038889278]
+vertices = PackedVector2Array(-1771, -2346, -2271, -2362, -2567, -2138, -2576, -1568, -1785, -1589)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1285336065]
+vertices = PackedVector2Array(-6100, -3371, -5608, -3376, -5627, -2612, -6394, -2593, -6405, -3161)
+affect_navigation_mesh = true
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("2_pa8r4")]
 position = Vector2(6355, -1577)
@@ -91,7 +108,6 @@ position = Vector2(-1462.9995, -2969)
 
 [node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
 position = Vector2(1864, -3495)
-collision_layer = 1
 Goal = NodePath("../../player")
 activation = NodePath("Area2D")
 activated = false
@@ -107,7 +123,6 @@ debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy2" parent="Enemy" unique_id=460225757 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
 position = Vector2(230, -1979)
-collision_layer = 1
 Goal = NodePath("../../player")
 activation = NodePath("Area2D2")
 activated = false
@@ -123,7 +138,6 @@ debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy3" parent="Enemy" unique_id=1609423018 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
 position = Vector2(5452, -2801)
-collision_layer = 1
 Goal = NodePath("../../player")
 activation = NodePath("Area2D3")
 activated = false
