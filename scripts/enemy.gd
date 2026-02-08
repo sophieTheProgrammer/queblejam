@@ -1,5 +1,5 @@
 extends CharacterBody2D
-const movement_speed= 30000.0
+const movement_speed= 300.0
 @export var Goal: Node = null
 @onready var navigation: NavigationAgent2D = $NavigationAgent2D
 @onready var timer: Timer = $Timer
@@ -12,21 +12,19 @@ func _ready() -> void:
 	navigation.target_position = Goal.global_position
 
 func _physics_process (delta: float) -> void:
-	if !navigation.is_target_reached() and !Global.debug and activated: 
-		var nav_point_direction = to_local(navigation.get_next_path_position()).normalized()
-		velocity = nav_point_direction * movement_speed * delta
-		move_and_slide()
-
-
-func _on_timer_timeout() -> void:
-	if navigation.target_position != Goal.global_position && !Global.debug:
-		navigation.target_position = Goal.global_position
-		timer.start()
-	var old = transform
-	look_at(Goal.global_position)
-	var 	new = transform
-	transform = lerp(old, new, .1)
+	navigate(delta)
 
 func activate(_body):
 	#print("wow")
 	activated = true
+
+func navigate(delta: float):
+		var next_path_pos = navigation.get_next_path_position()
+		var new_velocity = global_position.direction_to(next_path_pos)*movement_speed
+		position+=new_velocity*delta
+		$animated_sprite.rotation = new_velocity.angle()
+
+
+func _on_timer_timeout() -> void:
+	navigation.target_position = Goal.global_position
+	$Timer.start()
