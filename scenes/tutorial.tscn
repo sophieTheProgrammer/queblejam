@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7xavbirsinof" path="res://scenes/death.tscn" id="4_4kmhl"]
 [ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="5_cq4me"]
 [ext_resource type="FontFile" uid="uid://bt6syfcgpsp5i" path="res://random assets/Valorax-lg25V.otf" id="5_gbqnl"]
-[ext_resource type="PackedScene" uid="uid://desgr87s82naa" path="res://scenes/tile_map.tscn" id="8_ckvwl"]
+[ext_resource type="PackedScene" uid="uid://cgntl531kybqm" path="res://scenes/tile_map.tscn" id="8_ckvwl"]
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="67_enemy"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_gbqnl"]
