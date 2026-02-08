@@ -19,6 +19,7 @@ func activate(_body):
 	activated = true
 
 func navigate(delta: float):
+	if activated and !navigation.is_target_reached():
 		var next_path_pos = navigation.get_next_path_position()
 		var new_velocity = global_position.direction_to(next_path_pos)*movement_speed
 		position+=new_velocity*delta
