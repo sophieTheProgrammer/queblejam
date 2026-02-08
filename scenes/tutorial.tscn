@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="67_enemy"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_gbqnl"]
-vertices = PackedVector2Array(10964.352, -3196.0781, 10730.609, 531.8672, 961.03125, 406.10156, 136.5, -3286.8906)
+vertices = PackedVector2Array(10964.352, -3196.0703, 10730.609, 531.8672, 962.9375, 406.1172, 943.0469, -3267.9219)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(124, -3297, 953, 416, 10740, 542, 10975, -3206)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(933, -3278, 953, 416, 10740, 542, 10975, -3206)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ckvwl"]
 size = Vector2(234.75, 1953.375)
@@ -58,23 +58,12 @@ position = Vector2(6387, -1864)
 [node name="house3" parent="houses" unique_id=1050645927 instance=ExtResource("2_ph3nu")]
 position = Vector2(3008, -2078)
 
-[node name="house2" parent="houses" unique_id=895962117 instance=ExtResource("2_ph3nu")]
-position = Vector2(1752, -2029)
-
-[node name="house" parent="houses" unique_id=1621905291 instance=ExtResource("2_ph3nu")]
-position = Vector2(476, -2003)
-
-[node name="house4" parent="houses" unique_id=1251941796 instance=ExtResource("2_ph3nu")]
-position = Vector2(6387, -1864)
-
 [node name="house5" parent="houses" unique_id=114246913 instance=ExtResource("2_ph3nu")]
 position = Vector2(8559, -1938)
 
-[node name="house6" parent="houses" unique_id=1769033054 instance=ExtResource("2_ph3nu")]
-position = Vector2(3008, -2078)
-
 [node name="house7" parent="houses" unique_id=781592711 instance=ExtResource("2_ph3nu")]
 position = Vector2(1752, -2029)
+scale = Vector2(-1, 1)
 
 [node name="house8" parent="houses" unique_id=1203697595 instance=ExtResource("2_ph3nu")]
 position = Vector2(476, -2003)

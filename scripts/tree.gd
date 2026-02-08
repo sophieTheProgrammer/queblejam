@@ -13,7 +13,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if tree_dead == true:
-		print(sprite.scale)
 		var tween = create_tween()
 		tween.tween_property(sprite, "scale", Vector2(0.307, 0.01), 0.1).set_trans(Tween.TRANS_CUBIC)
 		if sprite.scale <= Vector2(0.307001, 0.01):
