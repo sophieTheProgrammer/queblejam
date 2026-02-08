@@ -152,7 +152,7 @@ position = Vector2(3430, -705)
 [node name="Enemy" type="Node" parent="." unique_id=2057262548]
 
 [node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal") instance=ExtResource("7_q2dsb")]
-position = Vector2(1838, -3280)
+position = Vector2(822, -3344)
 Goal = NodePath("../../player")
 
 [node name="enemy2" parent="Enemy" unique_id=1885605896 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("7_q2dsb")]
@@ -171,17 +171,18 @@ shape = SubResource("RectangleShape2D_wae8j")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy3" parent="Enemy" unique_id=1864481966 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("7_q2dsb")]
-position = Vector2(5613, -1918)
+position = Vector2(5723, -2377)
 Goal = NodePath("../../player")
 activation = NodePath("Area2D")
 activated = false
 
 [node name="Area2D" type="Area2D" parent="Enemy/enemy3" unique_id=1436808820]
+position = Vector2(-456, 183)
 collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy3/Area2D" unique_id=112239815]
-position = Vector2(-2065, 289)
+position = Vector2(-1433, 708)
 shape = SubResource("RectangleShape2D_ha73p")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
