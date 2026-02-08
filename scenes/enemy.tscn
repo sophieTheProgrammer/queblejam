@@ -2,20 +2,29 @@
 
 [ext_resource type="Script" uid="uid://bdj0i58yreqs3" path="res://scripts/enemy.gd" id="1_7p1mj"]
 [ext_resource type="PackedScene" uid="uid://b7xavbirsinof" path="res://scenes/death.tscn" id="2_md0e3"]
+[ext_resource type="Texture2D" uid="uid://c8mxjsls3sld0" path="res://art/enemy1.png" id="3_5uy6h"]
+[ext_resource type="Texture2D" uid="uid://bcw4butv33lwj" path="res://art/enemy.png" id="4_5uy6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7p1mj"]
 size = Vector2(110, 104)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_xwavj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5uy6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5uy6h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
 [node name="enemy" type="CharacterBody2D" unique_id=1707054168]
 collision_layer = 0
 script = ExtResource("1_7p1mj")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1768919789]
-offset_left = -63.0
-offset_top = -60.0
-offset_right = 64.0
-offset_bottom = 60.0
-color = Color(0.782125, 0, 0.09272816, 1)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=506269665]
 debug_use_custom = true
@@ -30,6 +39,11 @@ shape = SubResource("RectangleShape2D_7p1mj")
 [node name="Death" parent="." unique_id=1216396373 instance=ExtResource("2_md0e3")]
 position = Vector2(-5.9604645e-08, 0)
 scale = Vector2(0.17, 0.19)
-collision_layer = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=354209145]
+position = Vector2(1.0000305, 0.9999924)
+scale = Vector2(0.2571464, 0.25714633)
+sprite_frames = SubResource("SpriteFrames_xwavj")
+autoplay = "default"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
