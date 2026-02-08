@@ -10,9 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="7_q2dsb"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4nkto"]
-vertices = PackedVector2Array(-4516.3516, 5, -4674.383, -4360.211, -2901.7578, -3438.1563, 4270.328, 11.9921875, 4369.6797, -2948.6563)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 0, 2, 4)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-4685, -4377, -4526, 15, 4280, 22, 4380, -2958, -2899, -3448)])
+vertices = PackedVector2Array(-2836.0078, -1516.3984, -3903.0938, -2385.4297, -3005.9922, -2396.6094, -2122.0078, -2377.3281, -1927.4609, -1528.7031, 2858.8438, -2298.789, 2318.5078, -1741.5781, 2006.0078, -1467.5625, 1130.0703, -1463.4297, -2126.9688, -2993.5625, 4256.172, -2846.0625, 4198.547, -2193.75, 3543.6094, -2195.0781, 3412.6406, -2270.539, 3397.6797, -2797.6094, -608.64844, -228.46094, 736, -709.8203, 1139.9609, -846.7969, 2015.9609, -870.21875, 4163.9688, -98.25, -2840.9922, -925.10156, -3222.0469, -1350.75, -3246.8438, -322.60938, 3165.4766, -1907.0469, 736, -1307.5625, -152.46094, -1303.4297, -594.3281, -1231.0938, -1244.7422, -1252.3281, -1633.1406, -956.59375, -1950.4297, -901.96094, -1618.6563, -198.45313, -134.47656, -674.1172, 3166.9375, -1737.6094, -2932, -3329.9531, 2926.1094, -2803.2734, -3922.9297, -2987.289, -3001, -2989.4375, 3188.2188, -1136.1484, 3188.5625, -1146.7734, 4185.5234, -1177.6094, 2336.4688, -1112.75, -3882.2188, -1346.75, -4786.6875, -2360.6172, -4253, -1051.8906, -5006.7813, -4404.617, -4793.2734, -2977.6719, -5045.8906, -118.72656, -4253, -317.3672)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 4, 3, 9), PackedInt32Array(10, 11, 12, 13, 14), PackedInt32Array(15, 16, 17, 18, 19), PackedInt32Array(0, 20, 21, 1), PackedInt32Array(22, 21, 20), PackedInt32Array(5, 13, 12, 23, 6), PackedInt32Array(17, 16, 24, 8), PackedInt32Array(4, 8, 24, 25), PackedInt32Array(4, 25, 26, 27), PackedInt32Array(4, 27, 28, 29), PackedInt32Array(29, 28, 30), PackedInt32Array(26, 25, 31, 15), PackedInt32Array(23, 32, 6), PackedInt32Array(33, 10, 14, 34), PackedInt32Array(33, 34, 5, 9), PackedInt32Array(2, 1, 35, 36), PackedInt32Array(33, 9, 36, 35), PackedInt32Array(37, 38, 39), PackedInt32Array(18, 37, 39, 19), PackedInt32Array(40, 37, 18), PackedInt32Array(40, 18, 7, 6), PackedInt32Array(1, 21, 41, 42), PackedInt32Array(42, 41, 43), PackedInt32Array(44, 33, 35, 45), PackedInt32Array(46, 44, 45, 42), PackedInt32Array(46, 42, 43, 47), PackedInt32Array(20, 29, 30, 22), PackedInt32Array(15, 31, 16), PackedInt32Array(46, 47, 22, 30), PackedInt32Array(19, 46, 30), PackedInt32Array(19, 30, 15), PackedInt32Array(10, 19, 39), PackedInt32Array(10, 39, 11)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-5125, -4601, -5167, 1, 4280, 22, 4380, -2958, -2899, -3448)])
+agent_radius = 120.0
 
 [sub_resource type="Theme" id="Theme_4nkto"]
 
@@ -20,11 +21,11 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-4685, -4377, -4526, 15
 distance = -40.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pa8r4"]
-distance = -108.0
+distance = -554.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_15mv3"]
 normal = Vector2(0.00028341007, -0.99999994)
-distance = -8623.31
+distance = -8805.003
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wae8j"]
 size = Vector2(591.375, 849.34375)
@@ -42,6 +43,46 @@ size = Vector2(868.375, 771.6875)
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1076676205]
 position = Vector2(4542, -11)
 navigation_polygon = SubResource("NavigationPolygon_4nkto")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1913641282]
+vertices = PackedVector2Array(-3345, -1230, -3840, -1227, -4133, -994, -4133, -438, -3364, -442)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1950504367]
+vertices = PackedVector2Array(-1206, -1131, -716, -1115, -727, -345, -1501, -322, -1512, -898)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=2000115724]
+vertices = PackedVector2Array(3584, -2075, 4077, -2074, 4067, -1294, 3291, -1270, 3286, -1848)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1637143048]
+vertices = PackedVector2Array(-4672, -2859, -4039, -2866, -4027, -2502, -4668, -2484)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=420037062]
+vertices = PackedVector2Array(-2246, -2873, -2882, -2870, -2885, -2514, -2243, -2500)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D6" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1568218133]
+vertices = PackedVector2Array(-2717, -1398, -2720, -1042, -2066, -1025, -2052, -1407)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D7" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=449334608]
+vertices = PackedVector2Array(-29, -1184, 616, -1187, 616, -825, -18, -799)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D8" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1690229583]
+vertices = PackedVector2Array(1252, -1344, 1888, -1347, 1894, -987, 1258, -970)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D9" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1144206057]
+vertices = PackedVector2Array(2442, -1621, 3084, -1618, 3072, -1253, 2453, -1236)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D10" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1878265869]
+vertices = PackedVector2Array(3031, -2682, 3281, -2679, 3289, -2397, 2995, -2412)
+affect_navigation_mesh = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=326295590]
 offset_left = 10.0
@@ -74,8 +115,8 @@ rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_15mv3")
 
 [node name="Death" parent="StaticBody2D" unique_id=1216396373 instance=ExtResource("4_vcx5n")]
-position = Vector2(4312, -94)
-scale = Vector2(20, 1)
+position = Vector2(4158, -38)
+scale = Vector2(26.075, 1)
 
 [node name="Tree" type="Node" parent="." unique_id=1027461552]
 

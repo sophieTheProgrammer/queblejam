@@ -1,5 +1,5 @@
 extends CharacterBody2D
-const movement_speed= 300.0
+const movement_speed= 500.0
 @export var Goal: Node = null
 @onready var navigation: NavigationAgent2D = $NavigationAgent2D
 @onready var timer: Timer = $Timer
