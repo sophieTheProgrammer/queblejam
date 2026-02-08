@@ -3,7 +3,6 @@ extends CharacterBody2D
 @export var SPEED = 1600.0
 @export var JUMP_VELOCITY = -1900.0
 @export var GRAVITY = 4000
-@export var coyote_frames = 3  # How many in-air frames to allow jumping
 @export var fast_fall = 80
  
 var coyote = false  # Track whether we're in coyote time or not
@@ -43,7 +42,7 @@ func handle_jump(delta):
 	
 	if last_floor and not is_on_floor() and not jumping:
 		coyote = true
-		$CoyoteTimer.start(0.4)
+		$CoyoteTimer.start(0.1)
 		#print("Starting Coyote Timer")
 		
 	# TODO: variable jump height makes character go too high
