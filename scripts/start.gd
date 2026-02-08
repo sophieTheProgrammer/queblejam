@@ -11,13 +11,13 @@ func _process(_delta: float) -> void:
 
 
 func _on_start_button_up() -> void:
-	Global.load_scene(0)
+	Global.load_scene(1)
 
 func _on_start_button_down() -> void:
 	SfxPlayer.play_sound(SfxPlayer.CLICK, 10)
 
 func _on_quick_start_button_up() -> void:
-	Global.load_scene(1)
+	Global.load_scene(2)
 	Global.Destination += 1
 
 func _on_quick_start_button_down() -> void:

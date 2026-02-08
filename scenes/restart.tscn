@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cvc6put33wq2a"]
+
+[ext_resource type="Script" uid="uid://ckbsf4ecpq3pa" path="res://scripts/restart.gd" id="1_7dg1w"]
+[ext_resource type="FontFile" uid="uid://bt6syfcgpsp5i" path="res://random assets/Valorax-lg25V.otf" id="2_lyatw"]
+
+[node name="Restart" type="Node2D" unique_id=1876381271]
+script = ExtResource("1_7dg1w")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1480343519]
+offset_left = -133.0
+offset_top = -80.0
+offset_right = 1312.0
+offset_bottom = 749.0
+color = Color(0.98039216, 0.7607843, 0.20392157, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1158674287]
+offset_left = 51.0
+offset_top = 5.0
+offset_right = 1131.0
+offset_bottom = 347.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_lyatw")
+theme_override_font_sizes/normal_font_size = 100
+text = "You escaped the matrix
+Congrats!!"
+horizontal_alignment = 1
+
+[node name="restart" type="Button" parent="." unique_id=1627033996]
+offset_left = 330.0
+offset_top = 362.0
+offset_right = 956.0
+offset_bottom = 532.0
+text = "restart"
+
+[connection signal="button_down" from="restart" to="." method="_on_restart_button_down"]
+[connection signal="button_up" from="restart" to="." method="_on_restart_button_up"]
