@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://jb1dkmkqemmv"]
 
 [ext_resource type="PackedScene" uid="uid://fqnpaxidr784" path="res://scenes/player.tscn" id="1_b4j7a"]
+[ext_resource type="PackedScene" uid="uid://cgntl531kybqm" path="res://scenes/tile_map.tscn" id="1_ne2mo"]
 [ext_resource type="FontFile" uid="uid://bt6syfcgpsp5i" path="res://random assets/Valorax-lg25V.otf" id="1_wo48x"]
 [ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="2_wo48x"]
 [ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="3_y0kc7"]
@@ -29,6 +30,8 @@ distance = -4722.7686
 size = Vector2(1893.6875, 1726.8438)
 
 [node name="level_2" type="Node2D" unique_id=985326687]
+
+[node name="TileMap" parent="." unique_id=294153611 instance=ExtResource("1_ne2mo")]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1076676205]
 position = Vector2(4542, -11)
