@@ -9,9 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="67_enemy"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_gbqnl"]
-vertices = PackedVector2Array(11417.32, -4337.2813, 10425.352, 1852.7813, 205.79688, 2827.7813, -4143.2734, 762.4922, -2753.2734, -4694.789)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-2761, -4705, -4155, 768, 204, 2838, 10434, 1862, 11429, -4347)])
+vertices = PackedVector2Array(10964.352, -3196.0781, 10730.609, 531.8672, 961.03125, 406.10156, 136.5, -3286.8906)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(124, -3297, 953, 416, 10740, 542, 10975, -3206)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ckvwl"]
 size = Vector2(234.75, 1953.375)

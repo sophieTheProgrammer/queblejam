@@ -24,5 +24,5 @@ func _on_timer_timeout() -> void:
 		timer.start()
 
 func activate(_body):
-	print("wow")
+	#print("wow")
 	activated = true

@@ -116,7 +116,7 @@ shape = SubResource("RectangleShape2D_fcfvj")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy3" parent="Enemy" unique_id=1609423018 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
-position = Vector2(5440, -2287)
+position = Vector2(5452, -2801)
 Goal = NodePath("../../player")
 activation = NodePath("Area2D")
 activated = false
@@ -126,6 +126,6 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy3/Area2D" unique_id=1122072793]
-position = Vector2(-828, 667)
+position = Vector2(-645, 1371)
 shape = SubResource("RectangleShape2D_fcfvj")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
