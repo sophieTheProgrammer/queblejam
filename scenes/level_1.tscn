@@ -48,7 +48,8 @@ rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_15mv3")
 
 [node name="Death" parent="StaticBody2D" unique_id=1216396373 instance=ExtResource("3_fcfvj")]
-position = Vector2(2258, -113)
+position = Vector2(1648.9999, -1065)
+rotation = 0.24958208
 scale = Vector2(21.83, 1)
 
 [node name="Tree" type="Node" parent="." unique_id=957508679]
@@ -90,6 +91,7 @@ position = Vector2(-1462.9995, -2969)
 
 [node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
 position = Vector2(1864, -3495)
+collision_layer = 1
 Goal = NodePath("../../player")
 activation = NodePath("Area2D")
 activated = false
@@ -105,6 +107,7 @@ debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy2" parent="Enemy" unique_id=460225757 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
 position = Vector2(230, -1979)
+collision_layer = 1
 Goal = NodePath("../../player")
 activation = NodePath("Area2D2")
 activated = false
@@ -120,6 +123,7 @@ debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy3" parent="Enemy" unique_id=1609423018 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
 position = Vector2(5452, -2801)
+collision_layer = 1
 Goal = NodePath("../../player")
 activation = NodePath("Area2D3")
 activated = false

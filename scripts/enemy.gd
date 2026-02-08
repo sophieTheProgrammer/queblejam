@@ -10,7 +10,7 @@ func _ready() -> void:
 	if activation:
 		activation.body_entered.connect(activate)
 	navigation.target_position = Goal.global_position
-
+	
 func _physics_process (delta: float) -> void:
 	if !navigation.is_target_reached() and !Global.debug and activated: 
 		position = position.move_toward(Goal.global_position, movement_speed * 100 * delta)

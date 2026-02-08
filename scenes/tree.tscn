@@ -29,6 +29,8 @@ shape = SubResource("RectangleShape2D_vplca")
 [node name="Area2D" type="Area2D" parent="." unique_id=1202298251]
 rotation = -3.1415925
 scale = Vector2(0.64000005, 0.64000005)
+collision_layer = 0
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1768289540]
 position = Vector2(-12.73435, 156.24995)
