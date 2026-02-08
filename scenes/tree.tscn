@@ -1,15 +1,13 @@
 [gd_scene format=3 uid="uid://bey60bmk2kegn"]
 
-[ext_resource type="Texture2D" uid="uid://g7huycvsknj0" path="res://art/tree.png" id="1_avsvi"]
 [ext_resource type="Script" uid="uid://b1g2w6m5hq3fr" path="res://scripts/tree.gd" id="1_vplca"]
+[ext_resource type="Texture2D" uid="uid://ch30dw5nn2wac" path="res://art/TREE FINAL.png" id="2_vplca"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_viusy"]
-radius = 298.74997
-height = 767.49994
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vplca"]
+size = Vector2(448.12497, 778.74994)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vplca"]
-radius = 387.49997
-height = 946.87494
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_viusy"]
+size = Vector2(503.75003, 1005.78107)
 
 [node name="tree" type="AnimatableBody2D" unique_id=1391525660]
 script = ExtResource("1_vplca")
@@ -18,24 +16,25 @@ script = ExtResource("1_vplca")
 one_shot = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1303620596]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_avsvi")
+position = Vector2(2.9999924, 9.000015)
+scale = Vector2(0.3074128, 0.3074128)
+texture = ExtResource("2_vplca")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1530915941]
-position = Vector2(0, -3)
+position = Vector2(8, -71)
 rotation = 1.5707964
 scale = Vector2(0.8000001, 0.8000001)
-shape = SubResource("CapsuleShape2D_viusy")
+shape = SubResource("RectangleShape2D_vplca")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1202298251]
 rotation = -3.1415925
 scale = Vector2(0.64000005, 0.64000005)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1768289540]
-position = Vector2(-4.687496, 39.062508)
+position = Vector2(-12.73435, 156.24995)
 rotation = 1.5707964
 scale = Vector2(1.0000001, 1.0000001)
-shape = SubResource("CapsuleShape2D_vplca")
+shape = SubResource("RectangleShape2D_viusy")
 
 [connection signal="timeout" from="Die Timer" to="." method="_on_die_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

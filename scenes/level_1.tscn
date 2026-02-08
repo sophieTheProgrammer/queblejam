@@ -106,14 +106,14 @@ debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 [node name="enemy2" parent="Enemy" unique_id=460225757 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
 position = Vector2(230, -1979)
 Goal = NodePath("../../player")
-activation = NodePath("Area2D")
+activation = NodePath("Area2D2")
 activated = false
 
-[node name="Area2D" type="Area2D" parent="Enemy/enemy2" unique_id=817062216]
+[node name="Area2D2" type="Area2D" parent="Enemy/enemy2" unique_id=817062216]
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy2/Area2D" unique_id=2126396441]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy2/Area2D2" unique_id=2126396441]
 position = Vector2(424, -880)
 shape = SubResource("RectangleShape2D_fcfvj")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
@@ -121,14 +121,14 @@ debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 [node name="enemy3" parent="Enemy" unique_id=1609423018 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
 position = Vector2(5452, -2801)
 Goal = NodePath("../../player")
-activation = NodePath("Area2D")
+activation = NodePath("Area2D3")
 activated = false
 
-[node name="Area2D" type="Area2D" parent="Enemy/enemy3" unique_id=1615211646]
+[node name="Area2D3" type="Area2D" parent="Enemy/enemy3" unique_id=1615211646]
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy3/Area2D" unique_id=1122072793]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy3/Area2D3" unique_id=1122072793]
 position = Vector2(-645, 1371)
 shape = SubResource("RectangleShape2D_fcfvj")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)

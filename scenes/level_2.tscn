@@ -26,6 +26,9 @@ distance = -163.00014
 normal = Vector2(0.00028341007, -0.99999994)
 distance = -4722.7686
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ne2mo"]
+size = Vector2(1909.9219, 1726.8438)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0kc7"]
 size = Vector2(1893.6875, 1726.8438)
 
@@ -124,8 +127,8 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy/Area2D" unique_id=308927595]
-position = Vector2(-636, 1647)
-shape = SubResource("RectangleShape2D_y0kc7")
+position = Vector2(-731, 2179)
+shape = SubResource("RectangleShape2D_ne2mo")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy2" parent="Enemy" unique_id=540448674 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("5_6cvei")]
