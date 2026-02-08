@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://c3cur74ahof7j"]
+
+[ext_resource type="FontFile" uid="uid://bt6syfcgpsp5i" path="res://random assets/Valorax-lg25V.otf" id="1_x7blo"]
+[ext_resource type="PackedScene" uid="uid://fqnpaxidr784" path="res://scenes/player.tscn" id="2_qsmat"]
+[ext_resource type="PackedScene" uid="uid://c8nmx000lemsv" path="res://scenes/portal.tscn" id="3_yk4f3"]
+[ext_resource type="PackedScene" uid="uid://b7xavbirsinof" path="res://scenes/death.tscn" id="4_cp0rv"]
+[ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="5_rr1tt"]
+[ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="6_7ewpb"]
+[ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="7_py6g0"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4nkto"]
+vertices = PackedVector2Array(3796.5625, -1635, 4050.2422, 1809, -4833.9375, 1809, -4817.039, -1206.1406, 353.9922, -2473.7031)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-4827, -1214, -4844, 1819, 4061, 1819, 3806, -1643, 354, -2484)])
+
+[sub_resource type="Theme" id="Theme_4nkto"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pa8r4"]
+distance = -237.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_15mv3"]
+normal = Vector2(0.00028341007, -0.99999994)
+distance = -8983.042
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wae8j"]
+size = Vector2(591.375, 849.34375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ha73p"]
+size = Vector2(758.375, 712.6875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhfj6"]
+size = Vector2(868.375, 771.6875)
+
+[node name="level_4" type="Node2D" unique_id=985326687]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1076676205]
+position = Vector2(4451, -1800)
+navigation_polygon = SubResource("NavigationPolygon_4nkto")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=326295590]
+offset_left = 6654.0
+offset_top = -2646.0
+offset_right = 7608.0
+offset_bottom = -2236.0
+theme = SubResource("Theme_4nkto")
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_x7blo")
+theme_override_font_sizes/normal_font_size = 100
+text = "A leap of faith"
+metadata/_edit_use_anchors_ = true
+
+[node name="player" parent="." unique_id=575009404 instance=ExtResource("2_qsmat")]
+position = Vector2(251, -2002)
+
+[node name="portal" parent="." unique_id=452576932 instance=ExtResource("3_yk4f3")]
+position = Vector2(7620, -360)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=850290715]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=345422280]
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_pa8r4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1343438125]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_15mv3")
+
+[node name="Death" parent="StaticBody2D" unique_id=1216396373 instance=ExtResource("4_cp0rv")]
+position = Vector2(4312, -94)
+scale = Vector2(23.76, 1)
+
+[node name="Tree" type="Node" parent="." unique_id=1027461552]
+
+[node name="tree2" parent="Tree" unique_id=2031004561 instance=ExtResource("5_rr1tt")]
+position = Vector2(3303, -1890)
+
+[node name="tree4" parent="Tree" unique_id=1740709721 instance=ExtResource("5_rr1tt")]
+position = Vector2(6547, -1983)
+
+[node name="tree5" parent="Tree" unique_id=797811607 instance=ExtResource("5_rr1tt")]
+position = Vector2(4660, -2023)
+
+[node name="tree6" parent="Tree" unique_id=193651190 instance=ExtResource("5_rr1tt")]
+position = Vector2(5397, -2195)
+
+[node name="House" type="Node" parent="." unique_id=1418792038]
+
+[node name="house" parent="House" unique_id=273667713 instance=ExtResource("6_7ewpb")]
+position = Vector2(288, -1369)
+
+[node name="house2" parent="House" unique_id=473170789 instance=ExtResource("6_7ewpb")]
+position = Vector2(1665, -2772)
+
+[node name="house3" parent="House" unique_id=2011144360 instance=ExtResource("6_7ewpb")]
+position = Vector2(2389, -1472)
+
+[node name="house4" parent="House" unique_id=1276622959 instance=ExtResource("6_7ewpb")]
+position = Vector2(4958, -3004)
+
+[node name="Enemy" type="Node" parent="." unique_id=2057262548]
+
+[node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal") instance=ExtResource("7_py6g0")]
+position = Vector2(1318, -1060)
+Goal = NodePath("../../player")
+
+[node name="enemy2" parent="Enemy" unique_id=1885605896 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("7_py6g0")]
+position = Vector2(2667, -3000)
+Goal = NodePath("../../player")
+activation = NodePath("Area2D")
+activated = false
+
+[node name="Area2D" type="Area2D" parent="Enemy/enemy2" unique_id=617906975]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy2/Area2D" unique_id=1888808027]
+position = Vector2(-229, 652)
+shape = SubResource("RectangleShape2D_wae8j")
+debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
+
+[node name="enemy3" parent="Enemy" unique_id=1864481966 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("7_py6g0")]
+position = Vector2(4827, -3913)
+Goal = NodePath("../../player")
+activation = NodePath("Area2D")
+activated = false
+
+[node name="Area2D" type="Area2D" parent="Enemy/enemy3" unique_id=1436808820]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy3/Area2D" unique_id=112239815]
+position = Vector2(-820, 1359)
+shape = SubResource("RectangleShape2D_ha73p")
+debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
+
+[node name="enemy4" parent="Enemy" unique_id=1363310727 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("7_py6g0")]
+position = Vector2(7077, -2841)
+Goal = NodePath("../../player")
+activation = NodePath("Area2D")
+activated = false
+
+[node name="Area2D" type="Area2D" parent="Enemy/enemy4" unique_id=1755013980]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy4/Area2D" unique_id=268215426]
+position = Vector2(-511, 523)
+shape = SubResource("RectangleShape2D_hhfj6")
+debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
