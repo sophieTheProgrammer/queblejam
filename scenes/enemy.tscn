@@ -28,7 +28,6 @@ script = ExtResource("1_7p1mj")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=506269665]
 debug_enabled = true
-debug_use_custom = true
 
 [node name="Timer" type="Timer" parent="." unique_id=1739188031]
 wait_time = 0.5

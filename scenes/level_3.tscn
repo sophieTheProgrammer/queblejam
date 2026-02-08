@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="7_q2dsb"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4nkto"]
-vertices = PackedVector2Array(-4516.3516, 5, -4674.383, -4360.211, -2901.7578, -3438.1563, 4270.328, 11.9921875, 4369.6797, -2948.6563)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 0, 2, 4)])
+vertices = PackedVector2Array(-2201.5625, -2920.7266, -2901.7578, -3438.1563, 4369.6797, -2948.6563, 4072.0938, -2102.3438, 3580.4375, -2085.8906, 1878.7266, -1354.8828, 1223.7109, -1298.0625, -2027.4766, -1407.2734, -2223.3672, -2375.4766, 2436.5078, -1604.4063, 1890.25, -897.27344, 2462.4922, -1096.1016, 3139.9297, -1088.8828, 4270.328, 11.9921875, 3299.1797, -1242.0703, 4064.9219, -1236.9297, 589.3203, -1192.8281, -10.1484375, -1146.2422, -687.21875, -1149, -1237.8672, -1149, -1569.3828, -1020.71094, -2051.4688, -921.3203, -2919.2813, -2872.2578, -3994.8594, -2908.6172, 3091.1094, -1642.5469, 3287.9063, -1859.8438, -4620.492, -2871.5313, -4674.383, -4360.211, -2750.961, -1388.75, -2850.7266, -2343.539, -1531.5, -318.53125, -3302.8203, -391.9375, -2753.039, -897.65625, -3319.25, -1331.3125, -4516.3516, 5, -4602.4297, -2372.8594, -4002.1328, -2345.539, -4150.5234, -1021.1172, 1279.2813, -880.7578, 574.71094, -690.02344, -4194.7266, -397.0625, -752.7578, -273.45313, -2.84375, -688.97656)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 0, 9), PackedInt32Array(10, 11, 12, 13), PackedInt32Array(12, 14, 15, 13), PackedInt32Array(7, 6, 16, 17, 18), PackedInt32Array(7, 18, 19), PackedInt32Array(3, 2, 13, 15), PackedInt32Array(7, 19, 20, 21), PackedInt32Array(1, 0, 22, 23), PackedInt32Array(14, 12, 24, 25), PackedInt32Array(26, 27, 1, 23), PackedInt32Array(0, 4, 25), PackedInt32Array(0, 25, 24, 9), PackedInt32Array(11, 10, 5, 9), PackedInt32Array(8, 7, 28, 29), PackedInt32Array(21, 20, 30, 31), PackedInt32Array(32, 21, 31), PackedInt32Array(28, 32, 31, 33, 29), PackedInt32Array(34, 35, 36, 37), PackedInt32Array(16, 6, 38, 39), PackedInt32Array(36, 23, 22, 29, 33), PackedInt32Array(36, 33, 37), PackedInt32Array(34, 37, 40), PackedInt32Array(13, 34, 40, 31, 41), PackedInt32Array(18, 17, 42, 41), PackedInt32Array(41, 42, 39, 13), PackedInt32Array(38, 10, 13, 39), PackedInt32Array(41, 31, 30)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-4685, -4377, -4526, 15, 4280, 22, 4380, -2958, -2899, -3448)])
 
 [sub_resource type="Theme" id="Theme_4nkto"]
@@ -42,6 +42,42 @@ size = Vector2(868.375, 771.6875)
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1076676205]
 position = Vector2(4542, -11)
 navigation_polygon = SubResource("NavigationPolygon_4nkto")
+
+[node name="NavigationObstacle2D9" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1359624858]
+vertices = PackedVector2Array(3298, -1855, 3309, -1252, 4055, -1247, 4062, -2092, 3584, -2076)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D8" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=759831315]
+vertices = PackedVector2Array(2447, -1595, 2472, -1106, 3129, -1099, 3082, -1632)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D7" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1749633886]
+vertices = PackedVector2Array(1235, -1289, 1288, -891, 1880, -907, 1869, -1344)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D6" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=817157122]
+vertices = PackedVector2Array(0, -1137, 7, -699, 565, -700, 579, -1182)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=335480094]
+vertices = PackedVector2Array(-4680, -2858, -4649, -2385, -4012, -2356, -4005, -2898)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1509674212]
+vertices = PackedVector2Array(-2908, -2863, -2842, -2354, -2233, -2385, -2212, -2910)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=679937595]
+vertices = PackedVector2Array(-4141, -1014, -4184, -407, -3313, -402, -3329, -1317)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=830769551]
+vertices = PackedVector2Array(-2741, -1379, -2743, -908, -2061, -931, -2038, -1397)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=557897042]
+vertices = PackedVector2Array(-1559, -1014, -1522, -328, -762, -284, -698, -1139, -1236, -1139)
+affect_navigation_mesh = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=326295590]
 offset_left = 10.0
