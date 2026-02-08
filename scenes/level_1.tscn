@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dcqh3cxvh6fn8"]
 
 [ext_resource type="PackedScene" uid="uid://ciuakvp37r8bx" path="res://scenes/enemy.tscn" id="1_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://cgntl531kybqm" path="res://scenes/tile_map.tscn" id="1_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://fqnpaxidr784" path="res://scenes/player.tscn" id="2_pa8r4"]
 [ext_resource type="PackedScene" uid="uid://bey60bmk2kegn" path="res://scenes/tree.tscn" id="3_15mv3"]
 [ext_resource type="PackedScene" uid="uid://b7xavbirsinof" path="res://scenes/death.tscn" id="3_fcfvj"]
@@ -23,6 +24,8 @@ distance = -6584.985
 size = Vector2(1586.8438, 1437.4219)
 
 [node name="level_1" type="Node2D" unique_id=532896419]
+
+[node name="TileMap" parent="." unique_id=294153611 instance=ExtResource("1_pa8r4")]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1327585009]
 position = Vector2(4542, -11)

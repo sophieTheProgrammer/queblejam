@@ -22,6 +22,10 @@ func _on_timer_timeout() -> void:
 	if navigation.target_position != Goal.global_position && !Global.debug:
 		navigation.target_position = Goal.global_position
 		timer.start()
+	var old = transform
+	look_at(Goal.global_position)
+	var 	new = transform
+	transform = lerp(old, new, .1)
 
 func activate(_body):
 	#print("wow")
