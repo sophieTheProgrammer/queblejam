@@ -1,6 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://b25fcicrd3wwt"]
 
 [ext_resource type="FontFile" uid="uid://h3m3gsfaavle" path="res://random assets/font.ttf" id="1_bvxxa"]
+[ext_resource type="FontFile" uid="uid://bt6syfcgpsp5i" path="res://random assets/Valorax-lg25V.otf" id="1_yibjn"]
 [ext_resource type="StyleBox" uid="uid://dvk3hcsfjvgk0" path="res://random assets/defaultStylebox.tres" id="2_yibjn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvxxa"]
@@ -14,7 +15,7 @@ corner_radius_bottom_left = 30
 
 [resource]
 Button/font_sizes/font_size = 50
-Button/fonts/font = ExtResource("1_bvxxa")
+Button/fonts/font = ExtResource("1_yibjn")
 Button/styles/hover = ExtResource("2_yibjn")
 Button/styles/normal = ExtResource("2_yibjn")
 Button/styles/pressed = SubResource("StyleBoxFlat_bvxxa")

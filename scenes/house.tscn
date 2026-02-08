@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://cn2rabxmse2ls"]
 
-[ext_resource type="Texture2D" uid="uid://cwhtqjs1hgygk" path="res://art/house.png" id="2_qtlar"]
+[ext_resource type="Texture2D" uid="uid://c8ww8m4wn6e36" path="res://art/final house.png" id="1_d7po0"]
 
 [node name="house" type="AnimatableBody2D" unique_id=273667713]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=610835347]
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_qtlar")
+position = Vector2(37.999992, -46)
+scale = Vector2(0.49103683, 0.49103683)
+texture = ExtResource("1_d7po0")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=761495194]
 position = Vector2(1.3436556, -9.403742)

@@ -9,9 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cn2rabxmse2ls" path="res://scenes/house.tscn" id="6_2os1m"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4nkto"]
-vertices = PackedVector2Array(-1460.2109, -3543.2266, 2097.9063, -2523.4766, 2069.1094, -1.9921875, -7134.117, 3.9921875, -6765.922, -4429.3438)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-6775, -4441, -7145, 14, 2079, 8, 2108, -2531, -1458, -3553)])
+vertices = PackedVector2Array(-1480.4375, -3435.0781, -5484.953, -3497.2578, -6207.047, -3582.5703, -6250.6484, -4086.7578, -732.4531, -1949, -709.53906, -1320.4531, -743.0781, -1676.0938, -752.85156, -2301.6328, -3613.2734, -2689.6328, -3606.7188, -2070.1719, -3643.289, -2415.1719, -3661.7969, -2992.3672, -6137.867, -3490.6172, 2187.461, -1386.5391, 2303.6484, -2807, 2542.2969, 256.64844, 2166.6328, -373.5703, -2686.0625, -2198.3906, -2697.961, -1444.7188, -2712.4219, -2083.8594, -2725.5703, -2692.3594, 1525, -1394.4922, 1130.1797, -1635.5703, -1648.8281, -2462.1484, -1638.5938, -2304.3828, 99.203125, -1351.6484, 92.35156, -1345.2109, 434.7578, -1667.1797, 148.78906, -1398.2813, 142.67188, -1949, -2309.5781, -2483.2969, 1146.5938, -1104.9688, 1110.8203, -609.5469, 1151.8516, -342.27344, -6526.2266, -3223.2266, -6729.0234, -3588.2266, 87.15625, -578.25, -4492.078, -2989.7422, -4485.4297, -3304, -5376.4688, -2693.0938, -4532, -2685.211, -4532, -2369.7031, -5509.883, -2494.8594, -1625.5078, -1689.8125, -1667.1406, -1472.0938, -7019.539, -4625.367, -6755.5625, -4101.828, -7012.2734, -2218.9297, -6511.6406, -2470.0469, -5389.6094, -3304)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(2, 1, 12), PackedInt32Array(13, 14, 15, 16), PackedInt32Array(17, 18, 19, 20), PackedInt32Array(13, 21, 22, 14), PackedInt32Array(23, 0, 14, 7, 24), PackedInt32Array(5, 25, 26), PackedInt32Array(27, 28, 29), PackedInt32Array(30, 17, 20, 0), PackedInt32Array(22, 21, 31), PackedInt32Array(32, 22, 31, 33), PackedInt32Array(2, 12, 34, 35), PackedInt32Array(5, 26, 36), PackedInt32Array(11, 37, 38, 0), PackedInt32Array(9, 19, 18), PackedInt32Array(39, 40, 41, 42), PackedInt32Array(41, 10, 9), PackedInt32Array(29, 4, 7, 14), PackedInt32Array(43, 6, 5, 44), PackedInt32Array(45, 0, 3), PackedInt32Array(45, 3, 46), PackedInt32Array(47, 45, 46, 35), PackedInt32Array(47, 35, 34, 48), PackedInt32Array(15, 47, 48, 18, 36), PackedInt32Array(36, 32, 33), PackedInt32Array(0, 23, 30), PackedInt32Array(20, 8, 11, 0), PackedInt32Array(33, 16, 15), PackedInt32Array(14, 22, 27, 29), PackedInt32Array(44, 23, 24, 43), PackedInt32Array(44, 5, 36, 18), PackedInt32Array(1, 0, 38, 49), PackedInt32Array(42, 1, 49, 39), PackedInt32Array(42, 41, 9, 18, 48), PackedInt32Array(15, 36, 33)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-7140, -4774, -7132, -2126, 2675, 415, 2416, -2910, -1458, -3553)])
+agent_radius = 120.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fcfvj"]
 distance = -2277.0002
@@ -30,6 +31,46 @@ size = Vector2(1586.8438, 1437.4219)
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1327585009]
 position = Vector2(4542, -11)
 navigation_polygon = SubResource("NavigationPolygon_4nkto")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=808858580]
+vertices = PackedVector2Array(1565, -1274, 1267, -1046, 1271, -466, 2049, -490, 2065, -1268)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1947798990]
+vertices = PackedVector2Array(1008, -1521, 480, -1545, 212, -1293, 208, -702, 993, -726)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=2038889278]
+vertices = PackedVector2Array(-1771, -2346, -2271, -2362, -2567, -2138, -2576, -1568, -1785, -1589)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1285336065]
+vertices = PackedVector2Array(-6100, -3371, -5608, -3376, -5627, -2612, -6394, -2593, -6405, -3161)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=426682236]
+vertices = PackedVector2Array(-608, -1829, 24, -1829, 28, -1469, -594, -1445)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D6" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1036260878]
+vertices = PackedVector2Array(-871, -2182, -1516, -2184, -1508, -1808, -865, -1798)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D7" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1688596594]
+vertices = PackedVector2Array(-3492, -2570, -2843, -2572, -2835, -2202, -3488, -2192)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D8" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=399805301]
+vertices = PackedVector2Array(-4412, -2870, -3778, -2872, -3767, -2529, -4412, -2496)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D9" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1950867346]
+vertices = PackedVector2Array(-4608, -3184, -5267, -3184, -5259, -2812, -4616, -2806)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D10" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1560298380]
+vertices = PackedVector2Array(-6629, -3978, -6361, -3970, -6338, -3704, -6615, -3707)
+affect_navigation_mesh = true
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("2_pa8r4")]
 position = Vector2(6355, -1577)
@@ -91,7 +132,6 @@ position = Vector2(-1462.9995, -2969)
 
 [node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
 position = Vector2(1864, -3495)
-collision_layer = 1
 Goal = NodePath("../../player")
 activation = NodePath("Area2D")
 activated = false
@@ -107,7 +147,6 @@ debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy2" parent="Enemy" unique_id=460225757 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
 position = Vector2(230, -1979)
-collision_layer = 1
 Goal = NodePath("../../player")
 activation = NodePath("Area2D2")
 activated = false
@@ -123,7 +162,6 @@ debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
 [node name="enemy3" parent="Enemy" unique_id=1609423018 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("1_fcfvj")]
 position = Vector2(5452, -2801)
-collision_layer = 1
 Goal = NodePath("../../player")
 activation = NodePath("Area2D3")
 activated = false
@@ -133,6 +171,6 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy3/Area2D3" unique_id=1122072793]
-position = Vector2(-645, 1371)
+position = Vector2(-703, 1061)
 shape = SubResource("RectangleShape2D_fcfvj")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
