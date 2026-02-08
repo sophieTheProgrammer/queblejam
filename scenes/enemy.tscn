@@ -18,6 +18,7 @@ offset_bottom = 60.0
 color = Color(0.782125, 0, 0.09272816, 1)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=506269665]
+debug_enabled = true
 debug_use_custom = true
 
 [node name="Timer" type="Timer" parent="." unique_id=1739188031]
@@ -30,6 +31,5 @@ shape = SubResource("RectangleShape2D_7p1mj")
 [node name="Death" parent="." unique_id=1216396373 instance=ExtResource("2_md0e3")]
 position = Vector2(-5.9604645e-08, 0)
 scale = Vector2(0.17, 0.19)
-collision_layer = 0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
