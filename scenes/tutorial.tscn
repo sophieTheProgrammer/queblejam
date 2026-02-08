@@ -30,7 +30,7 @@ distance = -10178.035
 z_index = -6
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=90692458]
-position = Vector2(-985, -399)
+position = Vector2(-977, -970)
 navigation_polygon = SubResource("NavigationPolygon_gbqnl")
 
 [node name="player" parent="." unique_id=575009404 instance=ExtResource("1_8ho6b")]
@@ -155,6 +155,7 @@ text = "space to JUMP"
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1766777922]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1021755966]
+position = Vector2(-13, -13)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_cq4me")
 
