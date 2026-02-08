@@ -26,10 +26,10 @@ Congrats!!"
 horizontal_alignment = 1
 
 [node name="restart" type="Button" parent="." unique_id=1627033996]
-offset_left = 330.0
-offset_top = 362.0
-offset_right = 956.0
-offset_bottom = 532.0
+offset_left = 291.0
+offset_top = 387.0
+offset_right = 917.0
+offset_bottom = 557.0
 text = "restart"
 
 [connection signal="button_down" from="restart" to="." method="_on_restart_button_down"]

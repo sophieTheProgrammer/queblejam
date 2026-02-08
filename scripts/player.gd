@@ -35,6 +35,8 @@ func _physics_process(delta: float) -> void:
 	
 # handles jump, gravity, and includes coyote time
 func handle_jump(delta):
+	if Input.is_action_just_pressed ("Jump") and not jumping:
+		SfxPlayer.play_sound(SfxPlayer.JUMP, 7)
 	if is_on_floor() and jumping:
 		jumping = false
 	# Add the gravity.
@@ -43,7 +45,7 @@ func handle_jump(delta):
 	
 	if last_floor and not is_on_floor() and not jumping:
 		coyote = true
-		$CoyoteTimer.start()
+		$CoyoteTimer.start(0.4)
 		#print("Starting Coyote Timer")
 		
 	# TODO: variable jump height makes character go too high
@@ -70,9 +72,6 @@ func handle_jump(delta):
 		sprite.play('idle')
 	
 	last_floor = is_on_floor()
-	
-	if Input.is_action_pressed ("Jump") and last_floor:
-		SfxPlayer.play_sound(SfxPlayer.JUMP, 7)
 	
 func flip_sprite(direction):
 	if direction != 0:
