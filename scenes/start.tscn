@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bqwbyydrljorq" path="res://scripts/start.gd" id="1_bodal"]
 [ext_resource type="Theme" uid="uid://b25fcicrd3wwt" path="res://random assets/default.tres" id="1_u80x2"]
 [ext_resource type="Texture2D" uid="uid://cs8kah7bbnegp" path="res://assets/Untitled_Artwork.png" id="2_bodal"]
+[ext_resource type="FontFile" uid="uid://bt6syfcgpsp5i" path="res://random assets/Valorax-lg25V.otf" id="2_kdmts"]
 
 [node name="Start" type="Node2D" unique_id=1876381271]
 script = ExtResource("1_bodal")
@@ -16,11 +17,13 @@ color = Color(0.98039216, 0.7607843, 0.20392157, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1158674287]
 offset_left = 52.0
-offset_right = 1263.0
-offset_bottom = 189.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+offset_right = 1037.0
+offset_bottom = 226.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_kdmts")
 theme_override_font_sizes/normal_font_size = 100
 text = "out of this dimension"
+horizontal_alignment = 1
 
 [node name="start" type="Button" parent="." unique_id=650704883]
 offset_left = 228.0

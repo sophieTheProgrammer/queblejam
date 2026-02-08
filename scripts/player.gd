@@ -35,8 +35,6 @@ func _physics_process(delta: float) -> void:
 	
 # handles jump, gravity, and includes coyote time
 func handle_jump(delta):
-	if Input.is_action_just_pressed ("Jump") and not jumping:
-		SfxPlayer.play_sound(SfxPlayer.JUMP, 7)
 	if is_on_floor() and jumping:
 		jumping = false
 	# Add the gravity.
@@ -54,7 +52,8 @@ func handle_jump(delta):
 		velocity.y += JUMP_VELOCITY
 		jumping = true
 		coyote = false
-	
+		SfxPlayer.play_sound(SfxPlayer.JUMP, 7)
+
 	#print(velocity.y)
 	# # adding fast fall on the way down
 	if not is_on_floor() and jumping:

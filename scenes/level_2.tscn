@@ -111,7 +111,7 @@ position = Vector2(3392, -2616)
 [node name="Enemy" type="Node" parent="." unique_id=2057262548]
 
 [node name="enemy" parent="Enemy" unique_id=1707054168 node_paths=PackedStringArray("Goal", "activation") instance=ExtResource("5_6cvei")]
-position = Vector2(2383, -4526)
+position = Vector2(2415, -5495)
 Goal = NodePath("../../player")
 activation = NodePath("Area2D")
 activated = false
@@ -121,7 +121,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/enemy/Area2D" unique_id=308927595]
-position = Vector2(-668, 1015)
+position = Vector2(-636, 1647)
 shape = SubResource("RectangleShape2D_y0kc7")
 debug_color = Color(0.95906776, 3.85046e-07, 0.52634484, 0.41960785)
 
