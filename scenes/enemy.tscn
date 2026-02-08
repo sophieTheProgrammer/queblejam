@@ -32,7 +32,6 @@ sprite_frames = SubResource("SpriteFrames_xwavj")
 autoplay = "default"
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=506269665]
-debug_enabled = true
 debug_use_custom = true
 
 [node name="Timer" type="Timer" parent="." unique_id=1739188031]
