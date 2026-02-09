@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bey60bmk2kegn"]
 
 [ext_resource type="Script" uid="uid://b1g2w6m5hq3fr" path="res://scripts/tree.gd" id="1_vplca"]
-[ext_resource type="Texture2D" uid="uid://ch30dw5nn2wac" path="res://art/TREE FINAL.png" id="2_vplca"]
+[ext_resource type="Texture2D" uid="uid://g7huycvsknj0" path="res://art/tree.png" id="2_vplca"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vplca"]
 size = Vector2(448.12497, 778.74994)
