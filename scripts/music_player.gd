@@ -1,8 +1,25 @@
 extends AudioStreamPlayer2D
+const STARTING_MUSIC = preload("uid://duyynbo0t2qs")
+const SCIFI = preload("res://audio/scifi.mp3")
 
-func _play_music(music, volume):
-	if stream == music:
-		return
-	stream = music
-	volume_db = volume
-	play()
+var current_player = null
+func _ready():
+	play_music(MusicPlayer.STARTING_MUSIC, 6)
+
+func play_music(Stream, Volume):
+
+	if current_player:
+		if Stream == current_player.stream:
+			return
+		current_player.queue_free()
+	var fx = AudioStreamPlayer.new()
+	fx.stream = Stream
+	fx.name = "audio effects player"
+	fx.volume_db = Volume
+	add_child(fx)
+	fx.play()
+	current_player = fx
+	await fx.finished
+
+	fx.queue_free()
+	

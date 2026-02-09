@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c3cur74ahof7j"]
+[gd_scene format=3 uid="uid://dcoouhotb23hf"]
 
 [ext_resource type="PackedScene" uid="uid://cgntl531kybqm" path="res://scenes/tile_map.tscn" id="1_ij176"]
 [ext_resource type="FontFile" uid="uid://bt6syfcgpsp5i" path="res://random assets/Valorax-lg25V.otf" id="2_uva14"]
