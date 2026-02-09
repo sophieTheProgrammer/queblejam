@@ -17,6 +17,8 @@ func load_scene(scene:int):
 	#get_tree().change_scene_to_packed(LEVELS[scene])
 	if LEVELS[scene] == START:
 		MusicPlayer.play_music(MusicPlayer.STARTING_MUSIC, 6)
+	if LEVELS[scene] == TUTORIAL_SCREEN:
+		MusicPlayer.play_music(MusicPlayer.STARTING_MUSIC, 6)
 	else:
 		MusicPlayer.play_music(MusicPlayer.SCIFI, 6)
 	get_tree().call_deferred("change_scene_to_packed", LEVELS[scene])

@@ -7,10 +7,11 @@ func _ready():
 	play_music(MusicPlayer.STARTING_MUSIC, 6)
 
 func play_music(Stream, Volume):
+
 	if current_player:
+		if Stream == current_player.stream:
+			return
 		current_player.queue_free()
-	if Stream == stream:
-		return
 	var fx = AudioStreamPlayer.new()
 	fx.stream = Stream
 	fx.name = "audio effects player"
@@ -19,6 +20,6 @@ func play_music(Stream, Volume):
 	fx.play()
 	current_player = fx
 	await fx.finished
-	
+
 	fx.queue_free()
 	
