@@ -1,17 +1,15 @@
 [gd_scene format=3 uid="uid://btwvwwpsdoiq7"]
 
-[ext_resource type="Script" uid="uid://5872khr7qfmc" path="res://scenes/tutorial_screen.gd" id="1_obyet"]
+[ext_resource type="Script" uid="uid://5872khr7qfmc" path="res://scripts/tutorial_screen.gd" id="1_obyet"]
 [ext_resource type="Texture2D" uid="uid://ddhepwe06x1w8" path="res://handdrawn/tutorial/1.png" id="2_rn67y"]
 [ext_resource type="FontFile" uid="uid://bt6syfcgpsp5i" path="res://random assets/Valorax-lg25V.otf" id="3_2xfp7"]
 
 [node name="TutorialScreen" type="Node2D" unique_id=2074469298]
-position = Vector2(0, -2)
-rotation = 0.000830812
 script = ExtResource("1_obyet")
 
 [node name="Image" type="Sprite2D" parent="." unique_id=862860205]
-position = Vector2(577.27966, 336.5205)
-scale = Vector2(0.62962955, 0.6296296)
+position = Vector2(583.1055, 342)
+scale = Vector2(0.6351851, 0.6351852)
 texture = ExtResource("2_rn67y")
 
 [node name="TutorialLabel2" type="RichTextLabel" parent="." unique_id=1776522543]
