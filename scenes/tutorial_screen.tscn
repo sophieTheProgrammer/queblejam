@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://btwvwwpsdoiq7"]
+
+[ext_resource type="Script" uid="uid://5872khr7qfmc" path="res://scenes/tutorial_screen.gd" id="1_obyet"]
+[ext_resource type="Texture2D" uid="uid://ddhepwe06x1w8" path="res://handdrawn/tutorial/1.png" id="2_rn67y"]
+[ext_resource type="FontFile" uid="uid://bt6syfcgpsp5i" path="res://random assets/Valorax-lg25V.otf" id="3_2xfp7"]
+
+[node name="TutorialScreen" type="Node2D" unique_id=2074469298]
+position = Vector2(0, -2)
+rotation = 0.000830812
+script = ExtResource("1_obyet")
+
+[node name="Image" type="Sprite2D" parent="." unique_id=862860205]
+position = Vector2(577.27966, 336.5205)
+scale = Vector2(0.62962955, 0.6296296)
+texture = ExtResource("2_rn67y")
+
+[node name="TutorialLabel2" type="RichTextLabel" parent="." unique_id=1776522543]
+offset_left = 716.4957
+offset_top = 596.4049
+offset_right = 1861.4957
+offset_bottom = 726.40497
+rotation = -0.0004773088
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_2xfp7")
+theme_override_font_sizes/normal_font_size = 35
+text = "click to continue"
+
+[node name="TutorialLabel" type="RichTextLabel" parent="." unique_id=526812770]
+offset_left = 38.021584
+offset_top = 25.968422
+offset_right = 1183.0216
+offset_bottom = 155.96841
+rotation = -0.0004773088
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_2xfp7")
+theme_override_font_sizes/normal_font_size = 50
+text = "wekjhsdkjfh"
