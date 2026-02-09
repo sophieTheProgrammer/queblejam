@@ -3,7 +3,6 @@ extends Node2D
 
 @onready var tutorial_label: RichTextLabel = $TutorialLabel
 @onready var image_rect: Sprite2D = $Image
-@onready var start: Button = $start
 const Start = preload("res://scripts/start.gd")
 
 var current_step = 0
@@ -41,7 +40,7 @@ func _ready() -> void:
 	loadImageFromIndex(0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_released("click"):
 		if current_step == 6:
 			Global.load_scene(2)
