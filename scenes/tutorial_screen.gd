@@ -27,11 +27,11 @@ var tutorial_info = [
 		"image_path":"res://handdrawn/tutorial/4.png"
 	},
 	{
-		"text":"welcome to farming game :D",
+		"text":"welcome to farming game :d",
 		"image_path":"res://handdrawn/tutorial/5.png"
 	},
 	{
-		"text": "follow the portals to escape orion!",
+		"text": "follow the portals to escape!",
 		"image_path":"res://handdrawn/tutorial/6.png"
 	}
 ]
