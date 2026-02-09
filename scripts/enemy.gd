@@ -5,6 +5,7 @@ const movement_speed= 500.0
 @onready var timer: Timer = $Timer
 @export var activation: Area2D
 @export var activated : bool = true
+const SPEED = 1.1
 
 func _ready() -> void:
 	if activation:
@@ -12,7 +13,7 @@ func _ready() -> void:
 	navigation.target_position = Goal.global_position
 	
 func _physics_process (delta: float) -> void:
-	navigate(delta)
+	navigate(delta * SPEED)
 
 func activate(_body):
 	#print("wow")
