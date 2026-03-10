@@ -4,6 +4,13 @@
 
 [node name="house" type="AnimatableBody2D" unique_id=273667713]
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=967912519]
+offset_left = -403.0
+offset_top = -178.0
+offset_right = 325.65637
+offset_bottom = 435.0
+color = Color(0, 0, 0, 0.36078432)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=610835347]
 position = Vector2(37.999992, -46)
 scale = Vector2(0.49103683, 0.49103683)
@@ -12,4 +19,4 @@ texture = ExtResource("1_d7po0")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=761495194]
 position = Vector2(1.3436556, -9.403742)
 scale = Vector2(0.75, 0.75)
-polygon = PackedVector2Array(-135.12488, -563.4617, 528.8751, -563.4617, 509.0909, 481.81818, -527.2727, 509.0909, -531.8182, -259.0909)
+polygon = PackedVector2Array(-39.124878, -534.12836, 528.8751, -563.4617, 509.0909, 481.81818, -473.79153, 508.53833, -489.79153, -219.46167)

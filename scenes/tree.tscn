@@ -15,6 +15,13 @@ script = ExtResource("1_vplca")
 [node name="Die Timer" type="Timer" parent="." unique_id=292614544]
 one_shot = true
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1929435373]
+offset_left = -277.0
+offset_top = 93.0
+offset_right = 286.0
+offset_bottom = 281.0
+color = Color(0, 0, 0, 0.37254903)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1303620596]
 position = Vector2(-2.3841858e-07, 232.00003)
 scale = Vector2(0.3074128, 0.3074128)
